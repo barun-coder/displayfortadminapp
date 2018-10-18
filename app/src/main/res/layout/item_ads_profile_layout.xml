@@ -1,0 +1,66 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="10dp"
+    app:cardElevation="4dp">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/status_tb"
+            android:layout_toRightOf="@+id/society_type_iv"
+            android:orientation="vertical">
+
+            <com.displayfort.app.TextUtils.TypefaceTextViewBrandenBold
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prfile One"
+                android:textColor="@color/dark_text_color"
+                android:textSize="20sp" />
+
+
+            <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                android:id="@+id/expiry_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total item:5"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/status_tb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/toggle_selector"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E31E24</color>
+    <color name="colorPrimaryDark">#E31E24</color>
+    <color name="colorAccent">#DDDEE3</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="button">#E31E24</color>
+    <color name="button_text">#E31E24</color>
+
+    <color name="text_color">#898989</color>
+    <color name="dark_text_color">#494949</color>
+    <color name="edit_text_box">#898989</color>
+    <color name="edit_text_box_focus">#4E4B4B</color>
+</resources>
