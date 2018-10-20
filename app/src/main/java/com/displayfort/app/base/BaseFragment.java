@@ -2,15 +2,18 @@ package com.displayfort.app.base;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import yalantis.com.sidemenu.interfaces.ScreenShotable;
@@ -58,7 +61,6 @@ public class BaseFragment extends Fragment implements ScreenShotable, View.OnCli
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
     }
-
 
 
     public void startActivityWithouthAnim(FragmentActivity fragmentActivity,
@@ -142,5 +144,11 @@ public class BaseFragment extends Fragment implements ScreenShotable, View.OnCli
     @Override
     public Bitmap getBitmap() {
         return null;
+    }
+
+    public DisplayMetrics getScreenSize(Activity context) {
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        return displaymetrics;
     }
 }

@@ -27,7 +27,7 @@ public class ScreenListAdapter extends RecyclerView.Adapter<ScreenListAdapter.Vi
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView mSocietyNameTv;
         public TextView mSocietytypeIv;
-        public ToggleButton mStatustb;
+        public ImageView mStatustb;
 
         public ViewHolder(View view) {
             super(view);
@@ -57,7 +57,7 @@ public class ScreenListAdapter extends RecyclerView.Adapter<ScreenListAdapter.Vi
     @Override
     public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
         ScreenDao ScreenDao = finalList.get(position);
-        viewHolder.mStatustb.setChecked((Math.random() < 0.5));
+        viewHolder.mStatustb.setSelected((Math.random() < 0.5));
 
     }
 

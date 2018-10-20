@@ -42,8 +42,8 @@ public class AdsFragment extends BaseFragment implements View.OnClickListener {
     private AdsProfileListAdapter listAdapter;
     private ArrayList<AdsProfile> adsList;
 
-    public static ScreenFragment newInstance() {
-        ScreenFragment contentFragment = new ScreenFragment();
+    public static AdsFragment newInstance() {
+        AdsFragment contentFragment = new AdsFragment();
         Bundle bundle = new Bundle();
 //        bundle.putInt(Integer.class.getName(), resId);
         contentFragment.setArguments(bundle);

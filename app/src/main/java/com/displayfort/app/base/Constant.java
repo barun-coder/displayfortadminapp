@@ -1,5 +1,11 @@
 package com.displayfort.app.base;
 
+import com.displayfort.app.R;
+import com.displayfort.app.model.Friend;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by pc on 16/10/2018 17:05.
  * DisplayFortSoftware
@@ -16,4 +22,14 @@ public class Constant {
     public static final String REPORT = "Report";
     public static final String MEDIA = "Media";
     public static final String STATUS = "Status";
+    public static final List<Friend> friends = new ArrayList<>();
+
+    static {
+        friends.add(new Friend(R.mipmap.home_screen, "SCREEN", R.color.colorPrimary, "Travelling", "Flights", "Books", "Painting", "Design"));
+        friends.add(new Friend(R.mipmap.home_ads, "PROFILE", R.color.colorPrimary, "Sales", "Pets", "Skiing", "Hairstyles", "Сoffee"));
+        friends.add(new Friend(R.mipmap.home_schedile, "SCHEDULE", R.color.colorPrimary, "Android", "Development", "Design", "Wearables", "Pets"));
+        friends.add(new Friend(R.mipmap.home_unassigned, "UNASSIGN", R.color.colorPrimary, "Design", "Fitness", "Healthcare", "UI/UX", "Chatting"));
+        friends.add(new Friend(R.mipmap.home_media, "MEDIA", R.color.colorPrimary, "Development", "Android", "Healthcare", "Sport", "Rock Music"));
+        friends.add(new Friend(R.mipmap.home_expiry, "EXPIRY", R.color.colorPrimary, "Android", "IOS", "Application", "Development", "Company"));
+    }
 }

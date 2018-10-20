@@ -44,7 +44,19 @@
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
-            android:name=".screen.PullToZoomScrollActivity"
+            android:name=".screen.ScreenDetailActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".screen.UpdateGeneralActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".screen.AssignAdsScreenActivity"
             android:configChanges="keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"

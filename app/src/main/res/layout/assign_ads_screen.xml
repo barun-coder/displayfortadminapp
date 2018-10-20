@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar" />
+
+
+    <com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout
+        android:id="@+id/swipeRefresh_sr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/assign_btn"
+        android:layout_below="@+id/toolbar"
+        android:paddingTop="10dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/item_screen_layout"></android.support.v7.widget.RecyclerView>
+
+
+    </com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout>
+
+    <Button
+        android:id="@+id/assign_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/big_button_selector"
+        android:gravity="center"
+        android:paddingBottom="12dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="12dp"
+        android:text="Assign"
+        android:textColor="@drawable/text_selector"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

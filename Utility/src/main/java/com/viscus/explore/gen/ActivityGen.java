@@ -9,7 +9,7 @@ import java.util.List;
 //D:\Android Projects\Peat
 public class ActivityGen {
     public static final String PROJECT_PATH = "G:\\Android Projects";
-    public static final String VIEW_NAMES = "forget_password_activity";
+    public static final String VIEW_NAMES = "assign_ads_screen";
     // com.crown.NavadMap.NavigationPlaces
     //com.crown.peat.Activity
     private String PACKAGE_NAME = "com.displayfort.app.screen";

@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
@@ -27,7 +28,7 @@ public class AdsProfileListAdapter extends RecyclerView.Adapter<AdsProfileListAd
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView mSocietyNameTv;
         public TextView mSocietytypeIv;
-        public ToggleButton mStatustb;
+        public ImageView mStatustb;
 
         public ViewHolder(View view) {
             super(view);
@@ -47,8 +48,6 @@ public class AdsProfileListAdapter extends RecyclerView.Adapter<AdsProfileListAd
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_ads_profile_layout, viewGroup, false);
-
-
         return new ViewHolder(view);
     }
 
@@ -57,7 +56,7 @@ public class AdsProfileListAdapter extends RecyclerView.Adapter<AdsProfileListAd
     @Override
     public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
         AdsProfile AdsProfile = finalList.get(position);
-        viewHolder.mStatustb.setChecked((Math.random() < 0.5));
+        viewHolder.mStatustb.setSelected((Math.random() < 0.5));
 
     }
 

@@ -11,7 +11,12 @@ public class AdsProfile {
     public String ExpiryDate = "";
     public String imageUrl = "";
     public int status = 0;
+    public boolean isSelected = false;
 
     public AdsProfile() {
+    }
+
+    public AdsProfile(boolean isselected) {
+        this.isSelected = isselected;
     }
 }

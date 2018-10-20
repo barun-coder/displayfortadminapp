@@ -12,55 +12,90 @@
     app:cardElevation="4dp">
 
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/layout_rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="8dp">
 
-
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_alignParentLeft="true"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/status_tb"
-            android:layout_toRightOf="@+id/society_type_iv"
-            android:orientation="vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <com.displayfort.app.TextUtils.TypefaceTextViewBrandenBold
-                android:id="@+id/title_tv"
+                android:id="@+id/adp_title_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Prfile One"
+                android:layout_alignParentLeft="true"
+                android:text="Mega Wall"
                 android:textColor="@color/dark_text_color"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
 
+            <ImageView
+                android:id="@+id/status_tb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/toggle_selector" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical">
 
             <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
-                android:id="@+id/expiry_tv"
+                android:id="@+id/media_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total item:5"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:text="Media:"
                 android:textColor="@color/text_color"
-                android:textSize="18sp" />
-        </LinearLayout>
+                android:textSize="14sp" />
 
-        <ToggleButton
-            android:id="@+id/status_tb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/toggle_selector"
-            android:textOff=""
-            android:textOn="" />
-    </RelativeLayout>
+            <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                android:id="@+id/media_coun_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/media_tv"
+                android:text="5"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                android:id="@+id/screen_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/screen_count_tv"
+                android:text="Screens:"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" />
+
+            <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                android:id="@+id/screen_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="5"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
 
 
 </android.support.v7.widget.CardView>

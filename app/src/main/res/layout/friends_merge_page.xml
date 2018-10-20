@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/view_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:minHeight="50dp">
+
+        <LinearLayout
+            android:id="@+id/first_ll"
+            android:layout_width="180dp"
+            android:layout_height="500dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:contentDescription="left image"
+                android:drawablePadding="1dp"
+                android:drawableTop="@mipmap/tags"
+                android:gravity="center"
+                android:text="454"
+                android:textColor="@color/dark_text_color" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:background="#80Ec3B3B" />
+
+        <LinearLayout
+            android:id="@+id/second_ll"
+            android:layout_width="180dp"
+            android:layout_height="500dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="right image"
+                android:drawablePadding="1dp"
+                android:gravity="center"
+                android:scaleType="center"
+                android:textColor="@color/dark_text_color" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+

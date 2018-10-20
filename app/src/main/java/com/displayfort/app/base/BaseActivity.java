@@ -118,6 +118,20 @@ public class BaseActivity extends AppCompatActivity implements OnClickListener {
         mtxtToolbarTitleTv.setText(title);
     }
 
+    public void SetToolBarITI(String title, int rightIv, OnClickListener rightListener) {
+        ImageView leftIconIv = findViewById(R.id.imgBack);
+        leftIconIv.setOnClickListener(this);
+        ImageView rightIconIv = findViewById(R.id.rightIv);
+        rightIconIv.setVisibility(View.VISIBLE);
+        if (rightIv != 0) {
+            rightIconIv.setImageResource(rightIv);
+        }
+        rightIconIv.setOnClickListener(rightListener);
+
+        TextView mtxtToolbarTitleTv = (TextView) findViewById(R.id.txtToolbarTitle);
+        mtxtToolbarTitleTv.setText(title);
+    }
+
     public void showError(String title, String msg) {
         Alerter.create(this)
                 .setDuration(1500)
