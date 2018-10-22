@@ -30,8 +30,12 @@ import com.displayfort.app.base.BaseFragment;
 import com.displayfort.app.base.Constant;
 import com.displayfort.app.fragments.AdsFragment;
 import com.displayfort.app.fragments.HomeFragment;
+import com.displayfort.app.fragments.LogsFragment;
+import com.displayfort.app.fragments.MediaFragment;
+import com.displayfort.app.fragments.ReportFragment;
 import com.displayfort.app.fragments.ScreenFragment;
 import com.displayfort.app.fragments.SettingFragment;
+import com.displayfort.app.fragments.StatusFragment;
 import com.displayfort.app.widgets.NewViewAnimator;
 
 import java.util.ArrayList;
@@ -205,28 +209,28 @@ public class HomeActivity extends BaseActivity implements ViewAnimator.ViewAnima
                 titleTv.setText(slideMenuItem.getName());
                 if (!currentFragment.equalsIgnoreCase(slideMenuItem.getName())) {
                     currentFragment = slideMenuItem.getName();
-                    return replaceFragment(screenShotable, position, SettingFragment.newInstance());
+                    return replaceFragment(screenShotable, position, LogsFragment.newInstance());
                 }
                 break;
             case Constant.REPORT:
                 titleTv.setText(slideMenuItem.getName());
                 if (!currentFragment.equalsIgnoreCase(slideMenuItem.getName())) {
                     currentFragment = slideMenuItem.getName();
-                    return replaceFragment(screenShotable, position, SettingFragment.newInstance());
+                    return replaceFragment(screenShotable, position, ReportFragment.newInstance());
                 }
                 break;
             case Constant.STATUS:
                 titleTv.setText(slideMenuItem.getName());
                 if (!currentFragment.equalsIgnoreCase(slideMenuItem.getName())) {
                     currentFragment = slideMenuItem.getName();
-                    return replaceFragment(screenShotable, position, SettingFragment.newInstance());
+                    return replaceFragment(screenShotable, position, StatusFragment.newInstance());
                 }
                 break;
             case Constant.MEDIA:
                 titleTv.setText(slideMenuItem.getName());
                 if (!currentFragment.equalsIgnoreCase(slideMenuItem.getName())) {
                     currentFragment = slideMenuItem.getName();
-                    return replaceFragment(screenShotable, position, SettingFragment.newInstance());
+                    return replaceFragment(screenShotable, position, MediaFragment.newInstance());
                 }
                 break;
             case Constant.LOGOUT:

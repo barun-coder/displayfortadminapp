@@ -6,6 +6,7 @@ package com.displayfort.app.screen;
  */
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
@@ -66,12 +67,13 @@ public class ScreenDetailActivity extends BaseActivity {
         getWindowManager().getDefaultDisplay().getMetrics(localDisplayMetrics);
         int mScreenHeight = localDisplayMetrics.heightPixels;
         int mScreenWidth = localDisplayMetrics.widthPixels;
-        LinearLayout.LayoutParams localObject = new LinearLayout.LayoutParams(mScreenWidth, (int) (9.0F * (mScreenWidth / 16.0F)));
+        LinearLayout.LayoutParams localObject = new LinearLayout.LayoutParams(mScreenWidth,(int) (0.8F * (mScreenWidth)));
         screenDetailViewHolder.mScrollView.setHeaderLayoutParams(localObject);
     }
 
     private void setHeaderToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setBackgroundColor(Color.argb(30, 0, 0, 0));
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
@@ -86,6 +88,7 @@ public class ScreenDetailActivity extends BaseActivity {
         screenDetailViewHolder.mScrollView.setHeaderView(headView);
         screenDetailViewHolder.mScrollView.setZoomView(zoomView);
         screenDetailViewHolder.mScrollView.setScrollContentView(contentView);
+//        screenDetailViewHolder.mScrollView.setHeaderViewSize(LinearLayout.LayoutParams.MATCH_PARENT,2200);
         profileContentViewHolder = new ProfileContentViewHolder(contentView, this);
         profileHeadViewHolder = new ProfileHeadViewHolder(headView, this);
         profileZoomViewHolder = new ProfileZoomViewHolder(zoomView, this);

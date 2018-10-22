@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ececec"
+    android:orientation="vertical">
+
+    <include layout="@layout/custom_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+            <!---->
+            <com.jaredrummler.materialspinner.MaterialSpinner xmlns:apd="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                apd:ms_arrow_tint="@color/colorPrimary"
+                apd:ms_hint="Media Type"
+                apd:ms_hintColor="@color/edit_text_box" />
+
+            <ImageView
+                android:id="@+id/media_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/white_round_rect"
+                android:minHeight="150dp"
+                android:src="@mipmap/dflogo" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+
+                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+
+                    android:layout_toLeftOf="@+id/attach_iv"
+                    android:background="@drawable/white_round_rect" />
+
+                <ImageView
+                    android:id="@+id/attach_iv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="8dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@mipmap/attachment_icon_red" />
+
+
+            </RelativeLayout>
+            <!---->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+
+                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                    android:id="@+id/week_days_su_tv"
+                    style="@style/TextView.OPTION"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="Su" />
+
+                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                    android:id="@+id/week_days_m_tv"
+                    style="@style/TextView.OPTION"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="m" />
+
+                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                    android:id="@+id/week_days_t_tv"
+                    style="@style/TextView.OPTION"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="t" />
+
+                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                    android:id="@+id/week_days_w_tv"
+                    style="@style/TextView.OPTION"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="w" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                    android:id="@+id/week_days_th_tv"
+                    style="@style/TextView.OPTION"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="th" />
+
+                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                    android:id="@+id/week_days_f_tv"
+                    style="@style/TextView.OPTION"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="f" />
+
+                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                    android:id="@+id/week_days_s_tv"
+                    style="@style/TextView.OPTION"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="S" />
+            </LinearLayout>
+            <!---->
+            <android.support.design.widget.TextInputLayout
+                style="@style/floatLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/seconds_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Play for (in Seconds)"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/floatLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/priority_order_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Priority/Sort Order"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/update_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:paddingBottom="12dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="12dp"
+                android:text="Add Media"
+                android:textColor="@drawable/text_selector"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

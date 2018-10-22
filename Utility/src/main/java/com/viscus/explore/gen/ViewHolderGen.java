@@ -11,7 +11,7 @@ import java.util.List;
 public class ViewHolderGen {
     private static final String LAYOUT_PATH = "G:\\DisplayFort\\androidCode\\DisplayFortSoftware\\app\\src\\main\\res\\layout";
 
-    private static final String XML_FILE_NAME = "assign_ads_screen.xml";
+    private static final String XML_FILE_NAME = "add_ad_media_layout.xml";
 
     private static String WIDGETS = "";
 

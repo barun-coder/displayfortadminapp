@@ -9,7 +9,7 @@ import java.util.List;
 //D:\Android Projects\Peat
 public class ActivityGen {
     public static final String PROJECT_PATH = "G:\\Android Projects";
-    public static final String VIEW_NAMES = "assign_ads_screen";
+    public static final String VIEW_NAMES = "add_ad_media_layout";
     // com.crown.NavadMap.NavigationPlaces
     //com.crown.peat.Activity
     private String PACKAGE_NAME = "com.displayfort.app.screen";
@@ -106,12 +106,14 @@ public class ActivityGen {
                         + "View view = inflater.inflate(R.layout." + xml
                         + ", null);\n" + "return view;\n";
             } else {
-                javaTxt+="  private Context context;\n";
+                javaTxt += "  private Context context;\n";
+                javaTxt += "  private ViewHolder viewholder;\n";
                 javaTxt += "@Override \n"
                         + "public void onCreate(Bundle savedInstanceState) { \n"
                         + "super.onCreate(savedInstanceState);\n"
                         + "setContentView(R.layout." + xml + ");\n"
                         + "context = this;\n";
+                javaTxt += "  viewholder = new ViewHolder(findViewById(R.id.container_ll), this);\n";
             }
             javaTxt += "}\n\n";
             // getIntent method

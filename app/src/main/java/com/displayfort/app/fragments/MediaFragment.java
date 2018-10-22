@@ -5,17 +5,28 @@ package com.displayfort.app.fragments;
  * DisplayFortSoftware
  */
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.displayfort.app.R;
+import com.displayfort.app.adapter.MediaListAdapter;
 import com.displayfort.app.base.BaseFragment;
+import com.displayfort.app.model.MediaDao;
+import com.displayfort.app.screen.ScreenDetailActivity;
+import com.displayfort.app.widgets.RecyclerItemClickListener;
+import com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout;
+
+import java.util.ArrayList;
 
 /**
  * Created by Konstantin on 22.12.2014.
@@ -23,11 +34,15 @@ import com.displayfort.app.base.BaseFragment;
 public class MediaFragment extends BaseFragment {
 
 
-
     private View containerView;
     protected ImageView mImageView;
     protected int res;
     private Bitmap bitmap;
+    private MediaViewHolder mediaViewHolder;
+    private Context mContext;
+
+    private MediaListAdapter mediaListAdapter;
+    private ArrayList<MediaDao> screenList;
 
     public static MediaFragment newInstance() {
         MediaFragment contentFragment = new MediaFragment();
@@ -42,6 +57,8 @@ public class MediaFragment extends BaseFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         this.containerView = view.findViewById(R.id.container);
+        mediaViewHolder = new MediaViewHolder(view, this);
+        setAdapter();
     }
 
     @Override
@@ -54,8 +71,34 @@ public class MediaFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.media_add_fragmnt, container, false);
-
+        mContext = getActivity();
         return rootView;
+    }
+
+    private void setAdapter() {
+        mediaViewHolder.mRecyclerViewRv.setLayoutManager(new LinearLayoutManager(mContext));
+        screenList = getList();
+        mediaListAdapter = new MediaListAdapter(mContext, screenList);
+        mediaViewHolder.mRecyclerViewRv.setAdapter(mediaListAdapter);
+        mediaViewHolder.mRecyclerViewRv.addOnItemTouchListener(
+                new RecyclerItemClickListener(mContext, new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+//                        Intent intent = new Intent(mContext, ScreenDetailActivity.class);
+//                        intent.putExtra("SCREEN", screenList.get(position).name);
+//                        startActivityWithAnim(getActivity(), intent);
+                    }
+                }));
+
+    }
+
+    private ArrayList<MediaDao> getList() {
+        ArrayList<MediaDao> ScreenDaos = new ArrayList<>();
+        ScreenDaos.add(new MediaDao());
+        ScreenDaos.add(new MediaDao());
+        ScreenDaos.add(new MediaDao());
+        ScreenDaos.add(new MediaDao());
+        return ScreenDaos;
     }
 
     @Override
@@ -82,5 +125,18 @@ public class MediaFragment extends BaseFragment {
     @Override
     public Bitmap getBitmap() {
         return bitmap;
+    }
+
+    public class MediaViewHolder {
+        public SwipyRefreshLayout mSwipeRefreshSr;
+        public RecyclerView mRecyclerViewRv;
+
+        public MediaViewHolder(View view, View.OnClickListener listener) {
+            mSwipeRefreshSr = (SwipyRefreshLayout) view.findViewById(R.id.swipeRefresh_sr);
+            mRecyclerViewRv = (RecyclerView) view.findViewById(R.id.recyclerView_rv);
+
+            mSwipeRefreshSr.setOnClickListener(listener);
+            mRecyclerViewRv.setOnClickListener(listener);
+        }
     }
 }

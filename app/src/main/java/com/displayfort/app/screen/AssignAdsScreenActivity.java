@@ -11,6 +11,7 @@ import com.displayfort.app.R;
 import com.displayfort.app.adapter.AdsProfileListAdapter;
 import com.displayfort.app.adapter.AssignAdsProfileListAdapter;
 import com.displayfort.app.base.BaseActivity;
+import com.displayfort.app.base.BaseAnimation;
 import com.displayfort.app.model.AdsProfile;
 import com.displayfort.app.widgets.RecyclerItemClickListener;
 import com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout;
@@ -29,12 +30,15 @@ public class AssignAdsScreenActivity extends BaseActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.assign_ads_screen);
         context = this;
-        SetToolBarITI("Assign Ads", R.mipmap.ic_add, new View.OnClickListener() {
+
+        SetToolBarITT("Assign Ads", "ADD", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                Intent intent = new Intent(context, AddAdProfileActivity.class);
+                startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
             }
         });
+
         assignAdsViewHolder = new AssignAdsViewHolder(findViewById(R.id.container_ll), this);
         setAdapter();
     }
