@@ -11,6 +11,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
+
+        <activity
+            android:name=".screen.NewHomeScreenActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBlack"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".screen.ActivitySplash"
             android:configChanges="keyboardHidden"
@@ -18,11 +33,12 @@
             android:theme="@style/AppThemestart"
             android:windowSoftInputMode="stateHidden|adjustResize">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--  <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+                  <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>-->
         </activity>
 
         <activity
@@ -39,6 +55,12 @@
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".screen.HomeActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".screen.SubActivityScreen"
             android:configChanges="keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
@@ -69,6 +91,18 @@
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".screen.AddAdMediaActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".screen.ScreenViewActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".screen.ScreenScheduleActivity"
             android:configChanges="keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_Ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!---->
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:contentInsetEnd="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar_rl"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?selectableItemBackgroundBorderless"
+                android:scaleType="center"
+                android:src="@mipmap/back"
+                android:visibility="visible" />
+
+            <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                android:id="@+id/txtToolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/rightIv"
+                android:layout_toRightOf="@+id/imgBack"
+                android:gravity="center_vertical"
+                android:text="Title"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/rightIv"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?selectableItemBackgroundBorderless"
+
+                android:scaleType="center"
+                android:visibility="invisible" />
+
+            <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                android:id="@+id/rightTv"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?selectableItemBackgroundBorderless"
+                android:gravity="center_vertical"
+                android:paddingRight="8dp"
+                android:scaleType="center"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <!---->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_action_button"
+        android:layout_below="@+id/toolbar">
+
+        <CalendarView
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dateTextAppearance="@style/CalenderViewDateCustomText"
+            android:theme="@style/CalenderViewCustom"
+            android:visibility="gone"
+            android:weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
+
+        <com.github.sundeepk.compactcalendarview.CompactCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/compactcalendar_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:compactCalendarBackgroundColor="@color/white"
+            app:compactCalendarCurrentDayBackgroundColor="@color/colorAccent"
+            app:compactCalendarCurrentDayTextColor="@color/colorPrimaryDark"
+            app:compactCalendarCurrentSelectedDayBackgroundColor="@color/colorPrimary"
+            app:compactCalendarCurrentSelectedDayTextColor="@color/white"
+            app:compactCalendarEventIndicatorStyle="fill_large_indicator"
+            app:compactCalendarMultiEventIndicatorColor="@color/colorPrimary"
+            app:compactCalendarTargetHeight="250dp"
+            app:compactCalendarTextColor="@color/dark_text_color"
+            app:compactCalendarTextSize="12sp" />
+
+        <com.alamkanak.weekview.WeekView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/weekView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone"
+            app:columnGap="150dp"
+            app:dayBackgroundColor="#05000000"
+            app:eventTextColor="@android:color/white"
+            app:headerColumnBackground="#ffffffff"
+            app:headerColumnPadding="10dp"
+            app:headerColumnTextColor="@color/colorPrimary"
+            app:headerRowBackgroundColor="@color/text_color"
+            app:headerRowPadding="12dp"
+            app:hourHeight="60dp"
+            app:noOfVisibleDays="3"
+            app:textSize="12sp"
+            app:todayBackgroundColor="#1848adff"
+            app:todayHeaderTextColor="@color/colorAccent" />
+
+        <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+            android:id="@+id/events_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:lines="3"
+            android:padding="8dp"
+            android:scrollbars="vertical"
+            android:text=""
+            android:textColor="@color/dark_text_color"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_action_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:dividerPadding="16dp"
+        android:showDividers="middle">
+
+        <com.displayfort.app.TextUtils.TypefaceButtonBrandenReg
+            android:id="@+id/enable_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/green_button_selector"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Enabled"
+            android:textColor="#000"
+            android:visibility="gone" />
+
+        <com.displayfort.app.TextUtils.TypefaceButtonBrandenReg
+            android:id="@+id/assign_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/extra_button_selector"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Add Profile"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <com.displayfort.app.TextUtils.TypefaceButtonBrandenReg
+            android:id="@+id/schedule_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/head_btn_selector"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Schedule"
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </LinearLayout>
+</RelativeLayout>

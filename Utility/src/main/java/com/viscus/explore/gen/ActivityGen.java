@@ -9,7 +9,7 @@ import java.util.List;
 //D:\Android Projects\Peat
 public class ActivityGen {
     public static final String PROJECT_PATH = "G:\\Android Projects";
-    public static final String VIEW_NAMES = "add_ad_media_layout";
+    public static final String VIEW_NAMES = "screen_schedule_activity";
     // com.crown.NavadMap.NavigationPlaces
     //com.crown.peat.Activity
     private String PACKAGE_NAME = "com.displayfort.app.screen";

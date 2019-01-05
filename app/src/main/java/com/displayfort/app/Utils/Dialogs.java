@@ -83,28 +83,33 @@ public class Dialogs {
 
     }
 
+    public static void showYesNolDialog(Context context, String title, String message, final View.OnClickListener clickInAdapter,View.OnClickListener negativeListener) {
+        final Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setBackgroundDrawable(
+                new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.setContentView(R.layout.ok_cancel_dialog);
 
-//    public static void showOkDialog(Context context, String message) {
-//        final Dialog dialog = new Dialog(context, android.support.design.R.style.Base_Theme_AppCompat_Dialog_Alert);
-//        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        dialog.setCancelable(false);
-//        dialog.setContentView(R.layout.ok_dialog);
-//
-//        Button btnSubmit = dialog.findViewById(R.id.ok_btn);
-//
-//        TextView messageTv = dialog.findViewById(R.id.message_tv);
-//        messageTv.setText(message);
-//
-//        btnSubmit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                dialog.dismiss();
-//            }
-//        });
-//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-//        dialog.show();
-//
-//    }
+        TextView titleTv = dialog.findViewById(R.id.title_tv);
+        titleTv.setText(title);
+
+        TextView messageTv = dialog.findViewById(R.id.message_tv);
+        messageTv.setText(message);
+
+        Button cancelBtn = dialog.findViewById(R.id.cancel_btn);
+        cancelBtn.setText("NO");
+        cancelBtn.setTag(dialog);
+        cancelBtn.setOnClickListener(negativeListener);
+
+        Button okBtn = dialog.findViewById(R.id.ok_btn);
+        okBtn.setText("YES");
+        okBtn.setTag(dialog);
+        okBtn.setOnClickListener(clickInAdapter);
+
+        dialog.show();
+
+    }
 //
 //    public static void showOkDialog(Context context, String message, View.OnClickListener onClickListener) {
 //        final Dialog dialog = new Dialog(context, android.support.design.R.style.Base_Theme_AppCompat_Dialog_Alert);

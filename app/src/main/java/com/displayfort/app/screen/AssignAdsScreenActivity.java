@@ -1,13 +1,16 @@
 package com.displayfort.app.screen;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 
 import com.displayfort.app.R;
+import com.displayfort.app.Utils.Dialogs;
 import com.displayfort.app.adapter.AdsProfileListAdapter;
 import com.displayfort.app.adapter.AssignAdsProfileListAdapter;
 import com.displayfort.app.base.BaseActivity;
@@ -75,6 +78,23 @@ public class AssignAdsScreenActivity extends BaseActivity implements View.OnClic
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.assign_btn:
+                Dialogs.showYesNolDialog(context, "Succesfully Done", "Do want to schedule", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        ((Dialog) v.getTag()).dismiss();
+                        Intent intent = new Intent(context, ScreenScheduleActivity.class);
+                        startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
+                        finishActivityWithAnim();
+                    }
+                }, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        ((Dialog) v.getTag()).dismiss();
+                        finishActivityWithAnim();
+                    }
+                });
+                break;
             default:
                 super.onClick(v);
                 break;
@@ -83,6 +103,7 @@ public class AssignAdsScreenActivity extends BaseActivity implements View.OnClic
 
     /**/
     public class AssignAdsViewHolder {
+        private final Button mAddProfileBtn;
         public SwipyRefreshLayout mSwipeRefreshSr;
         public RecyclerView mRecyclerViewRv;
 
@@ -90,6 +111,8 @@ public class AssignAdsScreenActivity extends BaseActivity implements View.OnClic
             mSwipeRefreshSr = (SwipyRefreshLayout) view.findViewById(R.id.swipeRefresh_sr);
             mRecyclerViewRv = (RecyclerView) view.findViewById(R.id.recyclerView_rv);
             mSwipeRefreshSr.setEnabled(false);
+            mAddProfileBtn = view.findViewById(R.id.assign_btn);
+            mAddProfileBtn.setOnClickListener(listener);
         }
     }
 }

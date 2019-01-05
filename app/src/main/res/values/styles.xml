@@ -8,6 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppThemeBlack" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/DarkcolorPrimary</item>
+        <item name="colorPrimaryDark">@color/DarkcolorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
     <style name="AppThemestart" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/white</item>
@@ -102,11 +109,24 @@
 
     <style name="TextView.OPTION" parent="TextView">
         <item name="android:textSize">16sp</item>
-        <item name="android:layout_margin">2dp</item>
         <item name="android:background">@drawable/box_button_selector</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_margin">4dp</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@drawable/reverse_text_selector</item>
+    </style>
+
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/dark_text_color</item>
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
 </resources>

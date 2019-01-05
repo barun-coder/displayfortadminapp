@@ -23,6 +23,7 @@ import com.displayfort.app.adapter.ScreenListAdapter;
 import com.displayfort.app.base.BaseFragment;
 import com.displayfort.app.model.ScreenDao;
 import com.displayfort.app.screen.ScreenDetailActivity;
+import com.displayfort.app.screen.ScreenViewActivity;
 import com.displayfort.app.widgets.RecyclerItemClickListener;
 import com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout;
 
@@ -84,7 +85,7 @@ public class ScreenFragment extends BaseFragment implements View.OnClickListener
                 new RecyclerItemClickListener(mContext, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-                        Intent intent=new Intent(mContext, ScreenDetailActivity.class);
+                        Intent intent=new Intent(mContext, ScreenViewActivity.class);
                         intent.putExtra("SCREEN",screenList.get(position).name);
                         startActivityWithAnim(getActivity(),intent);
                     }

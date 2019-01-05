@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!--background-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@mipmap/background" />
+    <!--Top-->
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_layer"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/logo"
+            android:src="@mipmap/notification" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_below="@+id/top_layer"
+            android:background="@color/colorPrimary"
+            android:src="@mipmap/notification" />
+
+        <ImageView
+            android:id="@+id/top_layer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginTop="-1dp"
+            android:background="#221E25"
+            android:src="@mipmap/bottom_menu_background_one"
+            android:tint="#221E25" />
+
+
+        <RelativeLayout
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-1dp"
+                android:layout_marginTop="-1dp"
+                android:src="@mipmap/top_menu_background_two" />
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/df_logo" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--Menu Layout-->
+    <include
+        layout="@layout/menu_lauout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layout"
+        android:layout_marginTop="2dp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_above="@+id/most_bottom_iv"
+        android:background="@color/colorPrimary"
+        android:src="@mipmap/notification" />
+    <!--Bottom-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/most_bottom_iv"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-1dp"
+        android:layout_marginBottom="-2dp"
+        android:src="@mipmap/bottom_menu_background_two" />
+
+
+    <LinearLayout
+        android:id="@+id/most_bottom_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#221E25"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/menu_hamburger_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="20dp"
+            android:src="@mipmap/menu"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <!---->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:padding="0dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/top_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/left_iv"
+            android:background="@drawable/polygon_selector"
+            android:scaleType="center"
+            android:src="@mipmap/settings" />
+
+        <ImageView
+            android:id="@+id/left_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-8dp"
+            android:background="@drawable/polygon_selector"
+            android:scaleType="center"
+            android:src="@mipmap/settings" />
+
+        <ImageView
+            android:id="@+id/bottom_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_iv"
+            android:layout_toLeftOf="@+id/left_iv"
+            android:background="@drawable/polygon_selector"
+            android:scaleType="center"
+            android:src="@mipmap/settings" />
+
+        <ImageView
+            android:id="@+id/right_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="-8dp"
+            android:layout_toLeftOf="@+id/top_iv"
+            android:background="@drawable/polygon_selector"
+            android:scaleType="center"
+            android:src="@mipmap/settings" />
+
+    </RelativeLayout>
+</RelativeLayout>

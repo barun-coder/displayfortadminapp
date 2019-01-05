@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#E31E24</color>
-    <color name="colorPrimaryDark">#E31E24</color>
+    <color name="colorPrimary">#E41D37</color>
+    <color name="colorPrimaryDark">#E41D37</color>
+    <color name="DarkcolorPrimary">#221E25</color>
+    <color name="DarkcolorPrimaryDark">#221E25</color>
     <color name="colorAccent">#DDDEE3</color>
 
     <color name="white">#FFFFFF</color>
-    <color name="button">#E31E24</color>
+    <color name="button">#E41D37</color>
     <color name="button_selected">#bc0006</color>
-    <color name="button_text">#E31E24</color>
+    <color name="button_text">#E41D37</color>
+    <color name="theme">#E41D37</color>
 
     <color name="text_color">#898989</color>
     <color name="dark_text_color">#494949</color>
@@ -15,7 +18,7 @@
     <color name="edit_text_box_focus">#4E4B4B</color>
 
     <color name="float_text_color">#333333</color>
-
+    <color name="evenetss">#991c20</color>
     <!---->
     <color name="yellow">#FFFF00</color>
     <color name="fuchsia">#FF00FF</color>

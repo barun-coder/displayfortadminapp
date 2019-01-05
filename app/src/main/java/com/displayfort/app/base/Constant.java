@@ -12,6 +12,7 @@ import java.util.List;
  */
 public class Constant {
 
+    public static final String ACTIVTY_TYPE = "Activity_type";
     public static final String CLOSE = "Close";
     public static final String HOME = "Home";
     public static final String ADS_PROFILE = "Ads";

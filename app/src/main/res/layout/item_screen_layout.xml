@@ -49,7 +49,7 @@
                 android:id="@+id/unique_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="21548DF846+6G15"
+                android:text="Werlington Street Line O"
                 android:textColor="@color/text_color"
                 android:textSize="14sp" />
 
@@ -58,6 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20/JAN/2019"
+                android:visibility="gone"
                 android:textColor="@color/text_color"
                 android:textSize="14sp" />
         </LinearLayout>
