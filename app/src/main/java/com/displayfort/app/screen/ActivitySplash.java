@@ -30,7 +30,7 @@ public class ActivitySplash extends BaseActivity implements View.OnClickListener
 //                    new DFPrefrence(context).setIsLogin(true);
 //                    new DFPrefrence(context).setLoginSessionKey("b908f2c58bafd1c362fcf266c1770c69");
                     if (new DFPrefrence(context).IsLogin()) {
-                        startActivityWithAnim(new Intent(getBaseContext(), HomeActivity.class));
+                        startActivityWithAnim(new Intent(getBaseContext(), NewHomeScreenActivity.class));
                     } else {
                         startActivityWithAnim(new Intent(getBaseContext(), LoginActivity.class));
                     }

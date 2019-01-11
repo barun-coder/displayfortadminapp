@@ -77,7 +77,7 @@ public class LoginActivity extends BaseActivity {
             case R.id.login_btn:
                 if (isValid()) {
 //                    loginRequest();
-                    Intent intent = new Intent(context, HomeActivity.class);
+                    Intent intent = new Intent(context, NewHomeScreenActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivityWithAnim(intent);
                     finishActivityWithAnim();

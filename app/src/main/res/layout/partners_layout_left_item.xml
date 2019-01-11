@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_left_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/HEXA_size_half">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:cardElevation="10dp">
+
+
+            <RelativeLayout
+                android:id="@+id/layout_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/HEXA_size"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp">
+
+                    <com.displayfort.app.TextUtils.TypefaceTextViewBrandenBold
+                        android:id="@+id/title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mega Wall"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+
+                    <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                        android:id="@+id/company_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Werlington Street Line O"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp" />
+
+                    <com.displayfort.app.TextUtils.TypefaceTextViewBrandenLight
+                        android:id="@+id/email_id_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="aa@aa.com"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp" />
+
+                    <com.displayfort.app.TextUtils.TypefaceTextViewBrandenLight
+                        android:id="@+id/mobile_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="9993466461"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+    <com.github.siyamed.shapeimageview.HexagonImageView
+        android:layout_width="@dimen/HEXA_size"
+        android:layout_height="@dimen/HEXA_size"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="1dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/background"
+        app:siBorderColor="@color/red"
+        app:siBorderWidth="2dp" />
+</RelativeLayout>

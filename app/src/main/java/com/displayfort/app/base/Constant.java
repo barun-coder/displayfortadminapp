@@ -20,6 +20,7 @@ public class Constant {
     public static final String SETTING = "Setting";
     public static final String LOGOUT = "Logout";
     public static final String LOGS = "Logs";
+    public static final String PARTNERS= "partners";
     public static final String REPORT = "Report";
     public static final String MEDIA = "Media";
     public static final String STATUS = "Status";

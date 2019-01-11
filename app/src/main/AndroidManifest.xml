@@ -19,12 +19,7 @@
             android:theme="@style/AppThemeBlack"
             android:windowSoftInputMode="stateHidden|adjustResize">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".screen.ActivitySplash"
@@ -33,12 +28,12 @@
             android:theme="@style/AppThemestart"
             android:windowSoftInputMode="stateHidden|adjustResize">
 
-            <!--  <intent-filter>
-                  <action android:name="android.intent.action.MAIN" />
-                  <action android:name="android.intent.action.VIEW" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
-                  <category android:name="android.intent.category.LAUNCHER" />
-              </intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity
@@ -49,6 +44,13 @@
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".screen.ForgetPasswordActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".newScreen.PartnerListActivity"
             android:configChanges="keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"

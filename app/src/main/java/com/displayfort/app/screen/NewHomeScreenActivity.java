@@ -13,8 +13,10 @@ import android.widget.LinearLayout;
 
 import com.displayfort.app.R;
 import com.displayfort.app.base.BaseActivity;
+import com.displayfort.app.base.BaseAnimation;
 import com.displayfort.app.base.BaseFragment;
 import com.displayfort.app.base.Constant;
+import com.displayfort.app.newScreen.PartnerListActivity;
 
 import io.codetail.animation.SupportAnimator;
 import io.codetail.animation.ViewAnimationUtils;
@@ -70,7 +72,7 @@ public class NewHomeScreenActivity extends BaseActivity implements View.OnClickL
                 HideWithAnimation(Constant.SETTING);
                 break;
             case R.id.unassign_ll:
-                HideWithAnimation(Constant.LOGS);
+                HideWithAnimation(Constant.PARTNERS);
                 break;
             case R.id.media_ll:
                 HideWithAnimation(Constant.MEDIA);
@@ -125,10 +127,17 @@ public class NewHomeScreenActivity extends BaseActivity implements View.OnClickL
 
             @Override
             public void onAnimationEnd(Animation animation) {
+
                 screenViewHolder.mMenuLayoutLl.setVisibility(View.GONE);
-                Intent intent = new Intent(context, SubActivityScreen.class);
-                intent.putExtra(Constant.ACTIVTY_TYPE, fragmentStr);
-                startActivityWithAnim(intent);
+                if (fragmentStr.equalsIgnoreCase("PARTNERS")) {
+                    Intent intent = new Intent(context, PartnerListActivity.class);
+                    intent.putExtra(Constant.ACTIVTY_TYPE, fragmentStr);
+                    startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_DOWN_TO_UP);
+                } else {
+                    Intent intent = new Intent(context, SubActivityScreen.class);
+                    intent.putExtra(Constant.ACTIVTY_TYPE, fragmentStr);
+                    startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_DOWN_TO_UP);
+                }
 
             }
 
