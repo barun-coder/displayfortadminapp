@@ -43,4 +43,5 @@ dependencies {
     implementation 'com.github.sundeepk:compact-calendar-view:3.0.0'
     implementation 'com.github.Kunzisoft:Android-SwitchDateTimePicker:2.0'
     implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+    implementation 'com.github.lightfire:Android-Gradient-Text-Color:b0047755f7'
 }

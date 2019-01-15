@@ -5,10 +5,14 @@ package com.displayfort.app.model;
  * DisplayFortSoftware
  */
 public class MediaDao {
-    public String foldername = "";
+    public String foldername = "FOLDER";
     public int filecount = 0;
-
+    public boolean isSelect = false;
 
     public MediaDao() {
+    }
+
+    public MediaDao(String foldername) {
+        this.foldername = foldername;
     }
 }

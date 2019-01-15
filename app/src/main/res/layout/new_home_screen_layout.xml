@@ -113,6 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:background="?selectableItemBackgroundBorderless"
             android:paddingLeft="20dp"
             android:src="@mipmap/menu"
             android:visibility="visible" />

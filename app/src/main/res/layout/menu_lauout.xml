@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@null"
-    android:gravity="bottom"
+        android:gravity="bottom"
     android:orientation="horizontal"
     android:visibility="visible"
     android:weightSum="4">
@@ -22,19 +22,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingEnd="8dp"
             android:background="@color/theme"
-            android:gravity="right|center_vertical"
-            android:orientation="vertical">
+            android:gravity="start|center_vertical"
+            android:orientation="vertical"
+            android:paddingEnd="8dp">
             <!---->
             <LinearLayout
                 android:id="@+id/screen_ll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:selectableItemBackground"
-                android:gravity="right|center_vertical"
+                android:gravity="start|center_vertical"
                 android:orientation="horizontal"
                 android:padding="8dp">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@mipmap/polygon_white"
+                    android:scaleType="center"
+                    android:src="@mipmap/screens" />
 
                 <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
                     android:layout_width="wrap_content"
@@ -43,21 +53,12 @@
                     android:text="Screens"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="8dp"
-                    android:background="@mipmap/polygon_white"
-                    android:scaleType="center"
-                    android:src="@mipmap/screens" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:background="#80DADADA" />
             <!---->
             <LinearLayout
@@ -65,9 +66,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:selectableItemBackground"
-                android:gravity="right|center_vertical"
+                android:gravity="start|center_vertical"
                 android:orientation="horizontal"
                 android:padding="8dp">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@mipmap/polygon_white"
+                    android:scaleType="center"
+                    android:src="@mipmap/ads_profile" />
 
                 <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
                     android:layout_width="wrap_content"
@@ -76,21 +87,12 @@
                     android:text="Ad's Profile"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="8dp"
-                    android:background="@mipmap/polygon_white"
-                    android:scaleType="center"
-                    android:src="@mipmap/ads_profile" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:background="#80DADADA" />
             <!---->
             <LinearLayout
@@ -98,9 +100,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:selectableItemBackground"
-                android:gravity="right|center_vertical"
+                android:gravity="start|center_vertical"
                 android:orientation="horizontal"
                 android:padding="8dp">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@mipmap/polygon_white"
+                    android:scaleType="center"
+                    android:src="@mipmap/shedule" />
 
                 <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
                     android:layout_width="wrap_content"
@@ -109,21 +121,12 @@
                     android:text="Schedule"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="8dp"
-                    android:background="@mipmap/polygon_white"
-                    android:scaleType="center"
-                    android:src="@mipmap/shedule" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:background="#80DADADA" />
             <!---->
             <LinearLayout
@@ -131,9 +134,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:selectableItemBackground"
-                android:gravity="right|center_vertical"
+                android:gravity="start|center_vertical"
                 android:orientation="horizontal"
                 android:padding="8dp">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@mipmap/polygon_white"
+                    android:scaleType="center"
+                    android:src="@mipmap/partners_icon" />
 
                 <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
                     android:layout_width="wrap_content"
@@ -142,21 +155,12 @@
                     android:text="Partners"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="8dp"
-                    android:background="@mipmap/polygon_white"
-                    android:scaleType="center"
-                    android:src="@mipmap/unassign" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:background="#80DADADA" />
             <!---->
             <LinearLayout
@@ -164,9 +168,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:selectableItemBackground"
-                android:gravity="right|center_vertical"
+                android:gravity="start|center_vertical"
                 android:orientation="horizontal"
                 android:padding="8dp">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@mipmap/polygon_white"
+                    android:scaleType="center"
+                    android:src="@mipmap/media" />
 
                 <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
                     android:layout_width="wrap_content"
@@ -175,31 +189,33 @@
                     android:text="Media"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="8dp"
-                    android:background="@mipmap/polygon_white"
-                    android:scaleType="center"
-                    android:src="@mipmap/media" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:background="#80DADADA" />
             <!---->
             <LinearLayout
+                android:visibility="gone"
                 android:id="@+id/expiry_ll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:selectableItemBackground"
-                android:gravity="right|center_vertical"
+                android:gravity="start|center_vertical"
                 android:orientation="horizontal"
                 android:padding="8dp">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@mipmap/polygon_white"
+                    android:scaleType="center"
+                    android:src="@mipmap/expairy" />
 
                 <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
                     android:layout_width="wrap_content"
@@ -208,28 +224,20 @@
                     android:text="Expiry"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="8dp"
-                    android:background="@mipmap/polygon_white"
-                    android:scaleType="center"
-                    android:src="@mipmap/expairy" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:layout_marginLeft="8dp"
+                android:visibility="gone"
+                android:layout_marginRight="8dp"
                 android:background="#80DADADA" />
 
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
-                android:layout_marginLeft="8dp" />
+                android:layout_marginRight="8dp" />
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

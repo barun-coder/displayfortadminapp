@@ -22,7 +22,7 @@
                 android:layout_height="match_parent"
                 android:padding="4dp"
                 android:scrollbars="vertical"
-                tools:listitem="@layout/item_media_layout"></android.support.v7.widget.RecyclerView>
+                tools:listitem="@layout/item_media_layout"/>
 
 
         </com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout>

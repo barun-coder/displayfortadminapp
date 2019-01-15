@@ -15,4 +15,9 @@
             @style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle
         </item>
     </style>
+
+    <style name="SelectableItemBackground">
+        <item name="android:colorControlHighlight">@color/gray</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
 </resources>

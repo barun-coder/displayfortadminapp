@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/containers_Ll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/close_iv"
+        android:layout_width="@dimen/MEDIA_HEXA"
+        android:layout_height="@dimen/MEDIA_HEXA"
+        android:layout_alignParentLeft="true"
+        android:background="@mipmap/partner_outline"
+        android:scaleType="center"
+        android:src="@mipmap/cancel"
+        android:tint="#CD1D35"
+        android:visibility="visible" />
+
+    <com.displayfort.app.TextUtils.TypefaceEditTextBrandenReg
+        android:id="@+id/folder_name_et"
+        style="@style/editTextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_et"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/btn_iv"
+        android:layout_toRightOf="@+id/close_iv"
+        android:background="@drawable/edit_text_box_selector"
+        android:cursorVisible="true"
+        android:gravity="center"
+        android:hint="Folder Name"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textCursorDrawable="@null" />
+
+    <ImageView
+        android:id="@+id/btn_iv"
+        android:layout_width="@dimen/MEDIA_HEXA"
+        android:layout_height="@dimen/MEDIA_HEXA"
+        android:layout_alignParentRight="true"
+        android:scaleType="center"
+        android:src="@drawable/add_polygon_selector"
+        android:visibility="visible" />
+</RelativeLayout>

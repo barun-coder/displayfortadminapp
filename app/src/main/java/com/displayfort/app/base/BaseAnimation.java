@@ -22,7 +22,7 @@ public class BaseAnimation {
             case TAB_SLIDE:
                 Log.v("TAB_SLIDE", "TAB_SLIDE");
                 context.overridePendingTransition(R.anim.slide_in_right,
-                        android.R.anim.fade_in);
+                      0);
                 break;
             case TAB_SLIDE_FINISH:
                 context.overridePendingTransition(android.R.anim.fade_in,
@@ -30,7 +30,7 @@ public class BaseAnimation {
                 break;
             case TAB_SLIDE_DOWN_TO_UP:
                 context.overridePendingTransition(R.anim.slide_up_dialog,
-                        0);
+                        android.R.anim.fade_in);
                 break;
             case TAB_SLIDE_DOWN_TO_UP_FINISH:
                 context.overridePendingTransition(0,

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@mipmap/media_library_folder_grey" android:state_selected="true">
+
+    </item>
+    <item android:drawable="@mipmap/media_library_folder_white" android:state_pressed="true">
+
+    </item>
+    <!---->
+    <item android:drawable="@mipmap/media_library_folder">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+</selector>

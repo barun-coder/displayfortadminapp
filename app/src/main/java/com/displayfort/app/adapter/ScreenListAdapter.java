@@ -31,9 +31,7 @@ public class ScreenListAdapter extends RecyclerView.Adapter<ScreenListAdapter.Vi
 
         public ViewHolder(View view) {
             super(view);
-            mSocietyNameTv = view.findViewById(R.id.title_tv);
-            mSocietytypeIv = view.findViewById(R.id.unique_tv);
-            mStatustb = view.findViewById(R.id.status_tb);
+
         }
 
     }
@@ -46,8 +44,7 @@ public class ScreenListAdapter extends RecyclerView.Adapter<ScreenListAdapter.Vi
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_screen_layout, viewGroup, false);
-
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.screen_list_item, viewGroup, false);
 
         return new ViewHolder(view);
     }
@@ -57,7 +54,6 @@ public class ScreenListAdapter extends RecyclerView.Adapter<ScreenListAdapter.Vi
     @Override
     public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
         ScreenDao ScreenDao = finalList.get(position);
-        viewHolder.mStatustb.setSelected((Math.random() < 0.5));
 
     }
 

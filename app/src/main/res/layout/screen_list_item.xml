@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_left_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/SCREEN_HEXA_size_half"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/SCREEN_HEXA_size_half"
+                android:orientation="vertical"
+                android:paddingLeft="25dp">
+
+                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenBold
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mega Wall"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
+                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                    android:id="@+id/company_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:drawableLeft="@mipmap/partner_company_icon"
+                    android:drawablePadding="8dp"
+                    android:text="Werlington Street Line O"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp" />
+
+                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenLight
+                    android:id="@+id/email_id_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:drawableLeft="@mipmap/partner_mail_icon"
+                    android:drawablePadding="8dp"
+                    android:text="aa@aa.com"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp" />
+
+                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenLight
+                    android:id="@+id/mobile_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:drawableLeft="@mipmap/partner_mobile_icon"
+                    android:drawablePadding="8dp"
+                    android:text="9993466461"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp" />
+
+                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:drawableLeft="@mipmap/partner_mobile_icon"
+                    android:drawablePadding="8dp"
+                    android:text="9993466461"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_width="@dimen/SCREEN_HEXA_size_big"
+            android:layout_height="@dimen/SCREEN_HEXA_size_big"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/screen_polygon" />
+
+        <com.displayfort.app.widgets.HexagonMaskView
+            android:id="@+id/hexaImage_iv"
+            android:layout_width="@dimen/SCREEN_HEXA_size"
+            android:layout_height="@dimen/SCREEN_HEXA_size"
+            android:layout_centerInParent="true"
+            android:layout_margin="4dp"
+            android:src="@mipmap/partner_avatar"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

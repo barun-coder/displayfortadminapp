@@ -42,4 +42,5 @@ public class TypefaceTextViewBrandenReg extends TextView {
     }
 //
 
+
 }

@@ -1,16 +1,17 @@
 package com.displayfort.app.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.ToggleButton;
 
 import com.displayfort.app.R;
-import com.displayfort.app.model.AdsProfile;
 import com.displayfort.app.model.AdsProfile;
 
 import java.util.ArrayList;
@@ -26,15 +27,15 @@ public class AdsProfileListAdapter extends RecyclerView.Adapter<AdsProfileListAd
     private Context context;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView mSocietyNameTv;
+        public TextView mAdsProfileNameTv;
         public TextView mSocietytypeIv;
-        public ImageView mStatustb;
+        public TextView mStatustb;
 
         public ViewHolder(View view) {
             super(view);
-            mSocietyNameTv = view.findViewById(R.id.title_tv);
+            mAdsProfileNameTv = view.findViewById(R.id.adp_title_tv);
             mSocietytypeIv = view.findViewById(R.id.unique_tv);
-            mStatustb = view.findViewById(R.id.status_tb);
+            mStatustb = view.findViewById(R.id.status_tv);
         }
 
     }
@@ -56,7 +57,13 @@ public class AdsProfileListAdapter extends RecyclerView.Adapter<AdsProfileListAd
     @Override
     public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
         AdsProfile AdsProfile = finalList.get(position);
-        viewHolder.mStatustb.setSelected((Math.random() < 0.5));
+//        viewHolder.mStatustb.setSelected((Math.random() < 0.5));
+//        this.c1 = a.getInt(com.lightfire.gradienttextcolor.R.styleable.GradientTextView_gradientStart, 0);
+//        this.c2 = a.getInt(com.lightfire.gradienttextcolor.R.styleable.GradientTextView_gradientEnd, 0);
+//        LinearGradient shader = new LinearGradient(0.0F, 0.0F, 0.0F, this.getTextSize(), new int[]{this.c1, this.c2}, new float[]{0.0F, 1.0F}, Shader.TileMode.CLAMP);
+//        this.getPaint().setShader(this.shader);
+//        viewHolder.mAdsProfileNameTv.getPaint().setShader(textShader);
+
 
     }
 

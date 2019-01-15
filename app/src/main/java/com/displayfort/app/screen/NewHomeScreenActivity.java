@@ -16,7 +16,10 @@ import com.displayfort.app.base.BaseActivity;
 import com.displayfort.app.base.BaseAnimation;
 import com.displayfort.app.base.BaseFragment;
 import com.displayfort.app.base.Constant;
+import com.displayfort.app.newScreen.AdsProfileListActivity;
+import com.displayfort.app.newScreen.MediaListActivity;
 import com.displayfort.app.newScreen.PartnerListActivity;
+import com.displayfort.app.newScreen.ScreenListActivity;
 
 import io.codetail.animation.SupportAnimator;
 import io.codetail.animation.ViewAnimationUtils;
@@ -46,6 +49,9 @@ public class NewHomeScreenActivity extends BaseActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.menu_layout_ll:
+                hideLayout(v);
+                break;
             case R.id.left_iv:
                 break;
             case R.id.right_iv:
@@ -85,6 +91,9 @@ public class NewHomeScreenActivity extends BaseActivity implements View.OnClickL
         }
     }
 
+    public void hideLayout(View view) {
+        HideWithAnimation();
+    }
 
     private void ShowWithAnimation() {
         Animation bottomUp = AnimationUtils.loadAnimation(context,
@@ -129,10 +138,22 @@ public class NewHomeScreenActivity extends BaseActivity implements View.OnClickL
             public void onAnimationEnd(Animation animation) {
 
                 screenViewHolder.mMenuLayoutLl.setVisibility(View.GONE);
-                if (fragmentStr.equalsIgnoreCase("PARTNERS")) {
+                if (fragmentStr.equalsIgnoreCase(Constant.PARTNERS)) {
                     Intent intent = new Intent(context, PartnerListActivity.class);
                     intent.putExtra(Constant.ACTIVTY_TYPE, fragmentStr);
-                    startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_DOWN_TO_UP);
+                    startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
+                } else if (fragmentStr.equalsIgnoreCase(Constant.SCREEN)) {
+                    Intent intent = new Intent(context, ScreenListActivity.class);
+                    intent.putExtra(Constant.ACTIVTY_TYPE, fragmentStr);
+                    startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
+                } else if (fragmentStr.equalsIgnoreCase(Constant.ADS_PROFILE)) {
+                    Intent intent = new Intent(context, AdsProfileListActivity.class);
+                    intent.putExtra(Constant.ACTIVTY_TYPE, fragmentStr);
+                    startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
+                }else if (fragmentStr.equalsIgnoreCase(Constant.MEDIA)) {
+                    Intent intent = new Intent(context, MediaListActivity.class);
+                    intent.putExtra(Constant.ACTIVTY_TYPE, fragmentStr);
+                    startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
                 } else {
                     Intent intent = new Intent(context, SubActivityScreen.class);
                     intent.putExtra(Constant.ACTIVTY_TYPE, fragmentStr);
@@ -194,7 +215,7 @@ public class NewHomeScreenActivity extends BaseActivity implements View.OnClickL
             mLeftIv.setOnClickListener(listener);
             mBottomIv.setOnClickListener(listener);
             mRightIv.setOnClickListener(listener);
-
+            mMenuLayoutLl.setOnClickListener(listener);
             mMenuLayoutLl.setVisibility(View.GONE);
 
             mScreenLl.setOnClickListener(listener);
@@ -206,4 +227,12 @@ public class NewHomeScreenActivity extends BaseActivity implements View.OnClickL
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        if (screenViewHolder.mMenuLayoutLl.getVisibility() == View.VISIBLE) {
+            HideWithAnimation();
+        } else {
+            super.onBackPressed();
+        }
+    }
 }

@@ -78,8 +78,7 @@ public class MediaFragment extends BaseFragment {
     private void setAdapter() {
         mediaViewHolder.mRecyclerViewRv.setLayoutManager(new LinearLayoutManager(mContext));
         screenList = getList();
-        mediaListAdapter = new MediaListAdapter(mContext, screenList);
-        mediaViewHolder.mRecyclerViewRv.setAdapter(mediaListAdapter);
+                mediaViewHolder.mRecyclerViewRv.setAdapter(mediaListAdapter);
         mediaViewHolder.mRecyclerViewRv.addOnItemTouchListener(
                 new RecyclerItemClickListener(mContext, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override

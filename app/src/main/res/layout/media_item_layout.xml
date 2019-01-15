@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_Ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/top_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout
+        android:id="@+id/swipeRefresh_sr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/right_iv"
+        android:layout_below="@+id/top_layout">
+
+        <android.support.v7.widget.RecyclerView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/recyclerView_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:scrollbars="vertical"
+            app:layoutManager="android.support.v7.widget.GridLayoutManager"
+            tools:listitem="@layout/item_media_layout" />
+
+
+    </com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout>
+
+    <!---->
+
+
+    <ImageView
+        android:id="@+id/base"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bottom_iv"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:src="@mipmap/media_library_bottom" />
+
+    <ImageView
+        android:id="@+id/top_iv"
+        android:layout_width="@dimen/MEDIA_HEXA"
+        android:layout_height="@dimen/MEDIA_HEXA"
+        android:layout_above="@+id/bottom_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-2dp"
+        android:background="@drawable/media_polygon_selector"
+        android:scaleType="center"
+        android:src="@mipmap/cancel"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/bottom_iv"
+        android:layout_width="@dimen/MEDIA_HEXA"
+        android:layout_height="@dimen/MEDIA_HEXA"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/media_polygon_selector"
+        android:scaleType="center"
+        android:src="@mipmap/media_library_delete_icon" />
+
+
+    <ImageView
+        android:id="@+id/right_iv"
+        android:layout_width="@dimen/MEDIA_HEXA"
+        android:layout_height="@dimen/MEDIA_HEXA"
+        android:layout_above="@id/bottom_iv"
+        android:layout_marginRight="-8dp"
+        android:layout_marginBottom="-27dp"
+        android:layout_toRightOf="@+id/bottom_iv"
+        android:background="@drawable/media_polygon_selector"
+        android:scaleType="center"
+        android:src="@mipmap/media_library_search_icon" />
+
+    <ImageView
+        android:id="@+id/left_iv"
+        android:layout_width="@dimen/MEDIA_HEXA"
+        android:layout_height="@dimen/MEDIA_HEXA"
+        android:layout_above="@id/bottom_iv"
+        android:layout_marginLeft="-8dp"
+        android:layout_marginBottom="-27dp"
+        android:layout_toLeftOf="@+id/bottom_iv"
+        android:background="@drawable/media_polygon_selector"
+        android:scaleType="center"
+        android:src="@mipmap/media_library_plus_icon" />
+
+
+</RelativeLayout>

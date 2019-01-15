@@ -16,11 +16,12 @@
     <color name="dark_text_color">#494949</color>
     <color name="edit_text_box">#898989</color>
     <color name="edit_text_box_focus">#4E4B4B</color>
+    <color name="head_text">#5B5B5B</color>
 
     <color name="float_text_color">#333333</color>
     <color name="evenetss">#991c20</color>
     <!---->
-    <color name="yellow">#FFFF00</color>
+    <color name="yellow">#FECC00</color>
     <color name="fuchsia">#FF00FF</color>
     <color name="red">#FF0000</color>
     <color name="silver">#C0C0C0</color>

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container_right_rl"
@@ -21,13 +20,14 @@
             android:gravity="center_vertical"
             android:orientation="vertical"
             android:padding="10dp"
-            app:cardElevation="10dp">
+            app:cardElevation="8dp">
 
 
             <RelativeLayout
                 android:id="@+id/layout_rl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="8dp">
@@ -54,6 +54,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:drawableLeft="@mipmap/partner_company_icon"
+                        android:drawablePadding="8dp"
                         android:text="Werlington Street Line O"
                         android:textColor="@color/text_color"
                         android:textSize="16sp" />
@@ -63,6 +65,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:drawableLeft="@mipmap/partner_mail_icon"
+                        android:drawablePadding="8dp"
                         android:text="aa@aa.com"
                         android:textColor="@color/text_color"
                         android:textSize="16sp" />
@@ -72,6 +76,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:drawableLeft="@mipmap/partner_mobile_icon"
+                        android:drawablePadding="8dp"
                         android:text="9993466461"
                         android:textColor="@color/text_color"
                         android:textSize="16sp" />
@@ -84,13 +90,26 @@
         </android.support.v7.widget.CardView>
     </RelativeLayout>
 
-    <com.github.siyamed.shapeimageview.HexagonImageView
-        android:layout_width="@dimen/HEXA_size"
-        android:layout_height="@dimen/HEXA_size"
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="1dp"
-        android:layout_marginRight="16dp"
-        android:src="@mipmap/background"
-        app:siBorderColor="@color/red"
-        app:siBorderWidth="2dp" />
+        android:layout_marginRight="16dp">
+
+        <ImageView
+            android:layout_width="@dimen/HEXA_size_big"
+            android:layout_height="@dimen/HEXA_size_big"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/partner_outline"
+            android:scaleType="fitXY" />
+
+        <com.displayfort.app.widgets.HexagonMaskView
+            android:id="@+id/hexaImage_iv"
+            android:layout_width="@dimen/HEXA_size"
+            android:layout_height="@dimen/HEXA_size"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/partner_avatar" />
+    </RelativeLayout>
 </RelativeLayout>

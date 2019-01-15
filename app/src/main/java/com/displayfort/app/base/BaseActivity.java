@@ -4,14 +4,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.displayfort.app.R;
 import com.tapadoo.alerter.Alerter;
+
+import net.alhazmy13.mediapicker.Utility;
 
 /**
  * Base Class contain all common Method use in activity
@@ -21,6 +26,32 @@ import com.tapadoo.alerter.Alerter;
 public class BaseActivity extends AppCompatActivity implements OnClickListener {
     private Context mContext;
 
+    public void setupUI(View view) {
+
+        // Set up touch listener for non-text box views to hide keyboard.
+        if (!(view instanceof EditText)) {
+
+            view.setOnTouchListener(new View.OnTouchListener() {
+
+                public boolean onTouch(View v, MotionEvent event) {
+
+                    return false;
+                }
+
+            });
+        }
+
+        // If a layout container, iterate over children and seed recursion.
+        if (view instanceof ViewGroup) {
+
+            for (int i = 0; i < ((ViewGroup) view).getChildCount(); i++) {
+
+                View innerView = ((ViewGroup) view).getChildAt(i);
+
+                setupUI(innerView);
+            }
+        }
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
