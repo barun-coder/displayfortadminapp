@@ -21,6 +21,7 @@ public class HexagonMaskView extends AppCompatImageView {
     private Path hexagonPath;
     private Path hexagonBorderPath;
     private Paint mBorderPaint;
+    private int backGroundColor = 0;
 
     public HexagonMaskView(Context context) {
         super(context);
@@ -55,6 +56,11 @@ public class HexagonMaskView extends AppCompatImageView {
 
     public void setBorderColor(int color) {
         this.mBorderPaint.setColor(color);
+        invalidate();
+    }
+
+    public void setBackgroundColor(int color) {
+        this.backGroundColor = (color);
         invalidate();
     }
 
@@ -99,7 +105,11 @@ public class HexagonMaskView extends AppCompatImageView {
     public void onDraw(Canvas c) {
 //        c.drawPath(hexagonBorderPath, mBorderPaint);
         c.clipPath(hexagonPath, Region.Op.INTERSECT);
-        c.drawColor(Color.argb(0,255,249,191), PorterDuff.Mode.CLEAR);
+        if (backGroundColor == 0) {
+            c.drawColor(Color.argb(0, 255, 249, 191), PorterDuff.Mode.CLEAR);
+        } else {
+            c.drawColor(Color.argb(0, 255, 255, 255), PorterDuff.Mode.CLEAR);
+        }
         super.onDraw(c);
     }
 

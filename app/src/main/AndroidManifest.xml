@@ -80,6 +80,12 @@
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
+            android:name=".newScreen.ScheduleListActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
             android:name=".screen.HomeActivity"
             android:configChanges="keyboardHidden"
             android:screenOrientation="portrait"

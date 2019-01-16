@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.displayfort.app.R;
+import com.displayfort.app.screen.NewHomeScreenActivity;
 import com.tapadoo.alerter.Alerter;
 
 import net.alhazmy13.mediapicker.Utility;
@@ -65,6 +66,7 @@ public class BaseActivity extends AppCompatActivity implements OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.txtToolbarTitle:
             case R.id.imgBack:
                 onBackPressed();
         }
@@ -114,8 +116,9 @@ public class BaseActivity extends AppCompatActivity implements OnClickListener {
     /*toolbar*/
     public void SetToolBar(String title) {
         ImageView leftIconIv = findViewById(R.id.imgBack);
-        leftIconIv.setOnClickListener(this);
         TextView mtxtToolbarTitleTv = (TextView) findViewById(R.id.txtToolbarTitle);
+        leftIconIv.setOnClickListener(this);
+        mtxtToolbarTitleTv.setOnClickListener(this);
         mtxtToolbarTitleTv.setText(title);
     }
 
@@ -184,5 +187,12 @@ public class BaseActivity extends AppCompatActivity implements OnClickListener {
                 .setText(msg)
                 .setBackgroundColorRes(R.color.colorPrimaryDark) // or setBackgroundColorInt(Color.CYAN)
                 .show();
+    }
+
+    public void headLogo(View view) {
+        Intent intent = new Intent(this, NewHomeScreenActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivityWithAnim(intent);
+        finishActivityWithAnim();
     }
 }

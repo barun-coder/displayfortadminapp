@@ -37,11 +37,13 @@
             android:tint="#221E25" />
 
         <ImageView
+            android:id="@+id/head_logo_iv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:layout_gravity="center_vertical|right"
             android:background="?android:selectableItemBackground"
+            android:onClick="headLogo"
             android:src="@mipmap/df_inside_top_logo" />
 
 
@@ -71,18 +73,21 @@
             android:background="?selectableItemBackgroundBorderless"
             android:scaleType="center"
             android:src="@mipmap/back"
-            android:visibility="visible" />
+            android:visibility="gone" />
 
         <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
             android:id="@+id/txtToolbarTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/rightIv"
-            android:layout_toRightOf="@+id/imgBack"
+            android:drawableLeft="@mipmap/back"
+            android:drawablePadding="2dp"
+            android:ellipsize="end"
             android:gravity="center_vertical"
-            android:text="Title"
+            android:maxLength="20"
+            android:text=""
             android:textAllCaps="true"
             android:textColor="@android:color/white"
             android:textSize="16sp" />

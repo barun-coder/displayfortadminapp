@@ -19,6 +19,7 @@ import com.displayfort.app.base.Constant;
 import com.displayfort.app.newScreen.AdsProfileListActivity;
 import com.displayfort.app.newScreen.MediaListActivity;
 import com.displayfort.app.newScreen.PartnerListActivity;
+import com.displayfort.app.newScreen.ScheduleListActivity;
 import com.displayfort.app.newScreen.ScreenListActivity;
 
 import io.codetail.animation.SupportAnimator;
@@ -75,7 +76,7 @@ public class NewHomeScreenActivity extends BaseActivity implements View.OnClickL
                 HideWithAnimation(Constant.ADS_PROFILE);
                 break;
             case R.id.schedule_ll:
-                HideWithAnimation(Constant.SETTING);
+                HideWithAnimation(Constant.SCHEDULE);
                 break;
             case R.id.unassign_ll:
                 HideWithAnimation(Constant.PARTNERS);
@@ -152,6 +153,10 @@ public class NewHomeScreenActivity extends BaseActivity implements View.OnClickL
                     startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
                 }else if (fragmentStr.equalsIgnoreCase(Constant.MEDIA)) {
                     Intent intent = new Intent(context, MediaListActivity.class);
+                    intent.putExtra(Constant.ACTIVTY_TYPE, fragmentStr);
+                    startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
+                }else if (fragmentStr.equalsIgnoreCase(Constant.SCHEDULE)) {
+                    Intent intent = new Intent(context, ScheduleListActivity.class);
                     intent.putExtra(Constant.ACTIVTY_TYPE, fragmentStr);
                     startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
                 } else {

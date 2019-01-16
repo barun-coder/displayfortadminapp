@@ -17,6 +17,7 @@ public class Constant {
     public static final String HOME = "Home";
     public static final String ADS_PROFILE = "Ads";
     public static final String SCREEN = "Screens";
+    public static final String SCHEDULE = "Schedule";
     public static final String SETTING = "Setting";
     public static final String LOGOUT = "Logout";
     public static final String LOGS = "Logs";

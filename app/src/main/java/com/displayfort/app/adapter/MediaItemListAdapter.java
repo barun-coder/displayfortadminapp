@@ -1,7 +1,9 @@
 package com.displayfort.app.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import android.widget.TextView;
 import com.displayfort.app.R;
 import com.displayfort.app.interfaces.OnMediaClick;
 import com.displayfort.app.model.MediaDao;
+import com.displayfort.app.widgets.HexagonMaskView;
 
 import java.util.ArrayList;
 
@@ -30,14 +33,28 @@ public class MediaItemListAdapter extends RecyclerView.Adapter<MediaItemListAdap
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView mSocietyNameTv;
         public TextView mSocietytypeIv;
-        public ImageView mStatustb;
+        public ImageView mAdsIv;
+        public ImageView hexagonMaskView;
         public RelativeLayout mMediaFolderRl;
 
         public ViewHolder(View view) {
             super(view);
-                     mSocietyNameTv = view.findViewById(R.id.title_tv);
+
+            DisplayMetrics displayMetrics = new DisplayMetrics();
+            ((Activity) context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+            int height = displayMetrics.heightPixels;
+            int width = displayMetrics.widthPixels;
+
+            hexagonMaskView = view.findViewById(R.id.hexaImage_iv);
+            mMediaFolderRl = view.findViewById(R.id.layout_rl);
+            mSocietyNameTv = view.findViewById(R.id.title_tv);
             mSocietytypeIv = view.findViewById(R.id.unique_tv);
-            mStatustb = view.findViewById(R.id.status_tb);
+            mAdsIv = view.findViewById(R.id.screen_iv);
+            int space = (int) context.getResources().getDimension(R.dimen.TEN);
+            int finalwidth = (width - space) / 2;
+            int finalheigth = ((finalwidth) * 2) / 3;
+            mAdsIv.setLayoutParams(new RelativeLayout.LayoutParams(finalwidth, finalheigth));
+            hexagonMaskView.setLayoutParams(new RelativeLayout.LayoutParams(finalwidth, finalheigth));
         }
 
     }
@@ -61,7 +78,7 @@ public class MediaItemListAdapter extends RecyclerView.Adapter<MediaItemListAdap
     @Override
     public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
         final MediaDao mediaDao = finalList.get(position);
-       
+
 
     }
 
