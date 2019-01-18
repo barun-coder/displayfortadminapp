@@ -8,8 +8,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.displayfort.app.R;
+import com.displayfort.app.TextUtils.TypefaceHashTagAutocompleteBrandenReg;
 import com.displayfort.app.base.BaseActivity;
 import com.displayfort.app.base.BaseAnimation;
+import com.displayfort.app.widgets.HashTagSuggestAdapter;
 import com.kunzisoft.switchdatetime.SwitchDateTimeDialogFragment;
 
 import java.text.BreakIterator;
@@ -36,8 +38,28 @@ public class ScreenScheduleActivity extends BaseActivity implements View.OnClick
         context = this;
         SetToolBar("Schedule Screen");
         viewholder = new ScreenScheduleViewHolder(findViewById(R.id.container_ll), this);
+        initHashTag();
         initiDatetimePicker();
     }
+
+    private void initHashTag() {
+        final TypefaceHashTagAutocompleteBrandenReg textView = (TypefaceHashTagAutocompleteBrandenReg) findViewById(R.id.input_form);
+
+        HashTagSuggestAdapter adapter = new HashTagSuggestAdapter(this, android.R.layout.simple_dropdown_item_1line, COUNTRIES);
+        adapter.setCursorPositionListener(new HashTagSuggestAdapter.CursorPositionListener() {
+            @Override
+            public int currentCursorPosition() {
+                return textView.getSelectionStart();
+            }
+        });
+
+        textView.setAdapter(adapter);
+    }
+
+    private static final String[] COUNTRIES = new String[]{
+            "#Screen1", "#Screen2", "#Screen3", "#Germany", "#Spain"
+    };
+
 
     private void initiDatetimePicker() {
         // Construct SwitchDateTimePicker

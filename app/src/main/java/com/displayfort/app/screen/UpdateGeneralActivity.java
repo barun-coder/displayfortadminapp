@@ -17,7 +17,7 @@ public class UpdateGeneralActivity extends BaseActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.update_general_layout);
         context = this;
-        SetToolBar(getIntent().getExtras().getString("SCREEN", "Update Detail"));
+        SetToolBar("Update General");
     }
 
     public static Intent getIntent(Context context) {

@@ -58,7 +58,7 @@
                         android:layout_marginTop="2dp"
                         android:drawableLeft="@mipmap/partner_company_icon"
                         android:drawablePadding="8dp"
-                        android:text="Werlington Street Line O"
+                        android:text="Werlington Street Line O fffff"
                         android:textColor="@color/text_color"
                         android:textSize="16sp" />
 

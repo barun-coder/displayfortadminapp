@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/ads_profile_weekday_color_icon" android:state_pressed="true"></item>
+    <item android:drawable="@mipmap/ads_profile_weekday_color_icon" android:state_focused="true"></item>
+    <item android:drawable="@mipmap/ads_profile_weekday_color_icon" android:state_selected="true"></item>
+    <item android:drawable="@mipmap/ad_profile_white_weekday_icon"></item>
+</selector>
+

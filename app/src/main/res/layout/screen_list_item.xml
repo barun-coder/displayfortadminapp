@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@null"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="1dp">
 
 
     <RelativeLayout
@@ -13,81 +13,97 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginLeft="@dimen/SCREEN_HEXA_size_half"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp">
+        android:layout_marginRight="4dp">
 
         <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
             android:background="@color/white"
             android:gravity="center_vertical"
             android:orientation="vertical"
             android:padding="10dp"
-            app:cardElevation="8dp">
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/SCREEN_HEXA_size_half"
-                android:orientation="vertical"
-                android:paddingLeft="25dp">
+                android:paddingStart="20dp">
 
-                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenBold
-                    android:id="@+id/title_tv"
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mega Wall"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="16sp" />
+                    android:layout_alignBottom="@+id/screen_size_tv"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:padding="8dp"
+                    android:src="@mipmap/caution_icon"
+                    android:tint="@color/colorPrimary" />
 
-                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
-                    android:id="@+id/company_tv"
+                <LinearLayout
+                    android:id="@+id/bottom_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.displayfort.app.TextUtils.TypefaceTextViewBrandenBold
+                        android:id="@+id/title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:text="Mega Wall"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+
+                    <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                        android:id="@+id/partner_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:drawableLeft="@mipmap/partner_mini_icon"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/dark_text_color"
+                        android:gravity="center_vertical"
+                        android:text="Partner Name"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenLight
+                    android:id="@+id/creation_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/bottom_ll"
                     android:layout_marginTop="2dp"
-                    android:drawableLeft="@mipmap/partner_company_icon"
+                    android:layout_marginBottom="2dp"
+                    android:drawableLeft="@mipmap/calander_mini_icon"
                     android:drawablePadding="8dp"
-                    android:text="Werlington Street Line O"
+                    android:drawableTint="@color/dark_text_color"
+                    android:text="12, JAN 2019"
                     android:textColor="@color/text_color"
                     android:textSize="14sp" />
 
                 <com.displayfort.app.TextUtils.TypefaceTextViewBrandenLight
-                    android:id="@+id/email_id_tv"
+                    android:id="@+id/screen_size_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/creation_date"
                     android:layout_marginTop="2dp"
-                    android:drawableLeft="@mipmap/partner_mail_icon"
+                    android:layout_marginBottom="2dp"
+                    android:drawableLeft="@mipmap/screen_mini_icon"
                     android:drawablePadding="8dp"
-                    android:text="aa@aa.com"
+                    android:drawableTint="@color/dark_text_color"
+                    android:text="42 INCH"
+                    android:textAllCaps="true"
                     android:textColor="@color/text_color"
                     android:textSize="14sp" />
-
-                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenLight
-                    android:id="@+id/mobile_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:drawableLeft="@mipmap/partner_mobile_icon"
-                    android:drawablePadding="8dp"
-                    android:text="9993466461"
-                    android:textColor="@color/text_color"
-                    android:textSize="14sp" />
-
-                <com.displayfort.app.TextUtils.TypefaceTextViewBrandenLight
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:drawableLeft="@mipmap/partner_mobile_icon"
-                    android:drawablePadding="8dp"
-                    android:text="9993466461"
-                    android:textColor="@color/text_color"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
+            </RelativeLayout>
         </android.support.v7.widget.CardView>
     </RelativeLayout>
 

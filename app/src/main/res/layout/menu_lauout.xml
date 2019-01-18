@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@null"
-        android:gravity="bottom"
+    android:gravity="bottom"
     android:orientation="horizontal"
     android:visibility="visible"
     android:weightSum="4">
@@ -198,14 +198,14 @@
                 android:background="#80DADADA" />
             <!---->
             <LinearLayout
-                android:visibility="gone"
                 android:id="@+id/expiry_ll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:selectableItemBackground"
                 android:gravity="start|center_vertical"
                 android:orientation="horizontal"
-                android:padding="8dp">
+                android:padding="8dp"
+                android:visibility="visible">
 
 
                 <ImageView
@@ -221,7 +221,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Expiry"
+                    android:text="Setting"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -229,9 +229,9 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:visibility="gone"
                 android:layout_marginRight="8dp"
-                android:background="#80DADADA" />
+                android:background="#80DADADA"
+                />
 
 
             <View

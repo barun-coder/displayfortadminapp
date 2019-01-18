@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_Ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_header_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="15dp">
+
+                <ImageView
+                    android:layout_width="@dimen/SCREEN_HEXA_PROFILE_size_big"
+                    android:layout_height="@dimen/SCREEN_HEXA_PROFILE_size_big"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/screen_polygon_shadow"
+                    android:visibility="gone" />
+
+
+                <com.displayfort.app.widgets.HexagonMaskView
+                    android:id="@+id/hexaImage_iv"
+                    android:layout_width="@dimen/SCREEN_HEXA_PROFILE_size"
+                    android:layout_height="@dimen/SCREEN_HEXA_PROFILE_size"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="4dp"
+                    android:src="@mipmap/avatar_for_screens_whiteback"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="@dimen/SCREEN_HEXA_PROFILE_size_big"
+                    android:layout_height="@dimen/SCREEN_HEXA_PROFILE_size_big"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="2dp"
+                    android:background="@mipmap/screen_polygon_with_shadow" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+
+                <!--Username-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/partners"
+                        android:tint="#C52038" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:theme="@style/TextLabel"
+                        app:hintTextAppearance="@style/MyHintText">
+
+                        <EditText
+                            android:id="@+id/username_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Username"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <!--FirstName-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/partners"
+                        android:tint="#C52038" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:theme="@style/TextLabel"
+                        app:hintTextAppearance="@style/MyHintText">
+
+                        <EditText
+                            android:id="@+id/firstname_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="FirstName"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <!--Last NAme-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/partners"
+                        android:tint="#C52038" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:theme="@style/TextLabel"
+                        app:hintTextAppearance="@style/MyHintText">
+
+                        <EditText
+                            android:id="@+id/lastname_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="LastName"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <!--Mobile number-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/ads_for_age_group"
+                        android:tint="#C52038" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:theme="@style/floatLabel"
+                        app:hintTextAppearance="@style/MyHintText">
+
+                        <EditText
+                            android:id="@+id/mobile_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="123456789:-"
+                            android:hint="Contact No."
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <!--Email-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/screen_size"
+                        android:tint="#C52038" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:theme="@style/floatLabel"
+                        app:hintTextAppearance="@style/MyHintText">
+
+                        <EditText
+                            android:id="@+id/email_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <!--Company Name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/resolution"
+                        android:tint="#C52038" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:theme="@style/floatLabel"
+                        app:hintTextAppearance="@style/MyHintText">
+
+                        <EditText
+                            android:id="@+id/company_name_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Company Name"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <!--Status-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pt"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Status"
+                        android:textColor="@color/dark_text_color"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:id="@+id/chkState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="20dp"
+                        android:button="@drawable/toggle_selector"
+                        android:checked="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="18dp"
+                        android:textColor="@drawable/toggle_text_selector"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/update_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:background="@mipmap/edit_general_links_map_edit_button"
+                    android:gravity="center"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="12dp"
+                    android:text="Update"
+                    android:textColor="@drawable/text_selector"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

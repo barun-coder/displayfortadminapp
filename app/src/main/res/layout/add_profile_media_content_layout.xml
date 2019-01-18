@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_Ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_header_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/SCREEN_HEXA_PROFILE_size"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:background="@drawable/edit_text_box_normal">
+
+
+        <ImageView
+            android:id="@+id/media_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/avatar_for_screens_whiteback"
+            android:scaleType="centerInside" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <ImageView
+            android:id="@+id/delete_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@mipmap/ad_profile_delete_button" />
+
+        <ImageView
+            android:id="@+id/upload_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/delete_iv"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@mipmap/ads_profile_uplod_grey_button" />
+
+
+        <ImageView
+            android:id="@+id/plus_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/seconds_et"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@mipmap/ads_profile_plus_button" />
+
+        <ImageView
+            android:id="@+id/minus_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@mipmap/ads_profile_minus_button" />
+
+        <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+            android:id="@+id/seconds_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_toRightOf="@+id/minus_iv"
+            android:background="@drawable/edit_text_box_normal"
+            android:gravity="center"
+            android:hint="00"
+            android:minWidth="40dp"
+            android:padding="8dp"
+            android:textColor="@color/text_color" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/payment_option_rg"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="7">
+
+        <com.displayfort.app.TextUtils.TypefaceButtonBrandenReg
+            android:id="@+id/sun_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="-10dp"
+            android:layout_weight="1"
+            android:background="@drawable/hexa_media_weekly_btn_selector"
+            android:gravity="center"
+            android:paddingRight="4dp"
+            android:text="SUN"
+            android:textColor="@drawable/hexa_week_text_selector"
+            android:textSize="10sp" />
+
+
+        <com.displayfort.app.TextUtils.TypefaceButtonBrandenReg
+            android:id="@+id/mon_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="-10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rehexa_media_weekly_btn_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingRight="4dp"
+            android:text="MON"
+            android:textColor="@drawable/hexa_week_text_selector"
+            android:textSize="10sp" />
+
+        <com.displayfort.app.TextUtils.TypefaceButtonBrandenReg
+            android:id="@+id/tue_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="-10dp"
+            android:layout_weight="1"
+            android:background="@drawable/hexa_media_weekly_btn_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingRight="4dp"
+            android:text="TUE"
+            android:textColor="@drawable/hexa_week_text_selector"
+            android:textSize="10sp" />
+
+        <com.displayfort.app.TextUtils.TypefaceButtonBrandenReg
+            android:id="@+id/wed_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="-10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rehexa_media_weekly_btn_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingRight="4dp"
+            android:text="WED"
+            android:textColor="@drawable/hexa_week_text_selector"
+            android:textSize="10sp" />
+
+        <com.displayfort.app.TextUtils.TypefaceButtonBrandenReg
+            android:id="@+id/thu_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="-10dp"
+            android:layout_weight="1"
+            android:background="@drawable/hexa_media_weekly_btn_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingRight="4dp"
+            android:text="THU"
+            android:textColor="@drawable/hexa_week_text_selector"
+            android:textSize="10sp" />
+
+        <com.displayfort.app.TextUtils.TypefaceButtonBrandenReg
+            android:id="@+id/fri_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="-10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rehexa_media_weekly_btn_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingRight="4dp"
+            android:text="FRI"
+            android:textColor="@drawable/hexa_week_text_selector"
+            android:textSize="10sp" />
+
+        <com.displayfort.app.TextUtils.TypefaceButtonBrandenReg
+            android:id="@+id/sat_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/hexa_media_weekly_btn_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingRight="4dp"
+            android:text="SAT"
+            android:textColor="@drawable/hexa_week_text_selector"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+
+    <!---->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Priority/Sort Order"
+            android:textColor="@color/dark_text_color" />
+
+        <ImageView
+            android:id="@+id/pr_plus_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@mipmap/ads_profile_plus_button" />
+
+        <ImageView
+            android:id="@+id/pr_minus_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/priority_tv"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@mipmap/ads_profile_minus_button" />
+
+        <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+            android:id="@+id/priority_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@+id/pr_plus_id"
+            android:background="@drawable/edit_text_box_normal"
+            android:ems="2"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="1"
+            android:textColor="@color/text_color" />
+    </RelativeLayout>
+
+    <com.displayfort.app.TextUtils.TypefaceButtonBrandenReg
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_et"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@mipmap/edit_general_links_map_edit_button"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingTop="12dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="12dp"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

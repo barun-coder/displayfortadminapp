@@ -10,7 +10,10 @@ import android.view.View;
 import com.displayfort.app.R;
 import com.displayfort.app.adapter.ScheduleListAdapter;
 import com.displayfort.app.base.BaseActivity;
+import com.displayfort.app.base.BaseAnimation;
+import com.displayfort.app.base.Constant;
 import com.displayfort.app.model.ScheduleDao;
+import com.displayfort.app.screen.ScreenScheduleActivity;
 import com.displayfort.app.widgets.RecyclerItemClickListener;
 import com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout;
 
@@ -27,7 +30,13 @@ public class ScheduleListActivity extends BaseActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.schedule_list_layout);
         context = this;
-        SetToolBar("Schedule");
+        SetToolBarITI("Schedule List", R.mipmap.media_library_plus_icon, "Add Schedule", new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ScreenScheduleActivity.class);
+                startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
+            }
+        });
         viewholder = new HomeViewHolder(findViewById(R.id.container_Ll), this);
         setAdapter();
     }
@@ -41,7 +50,8 @@ public class ScheduleListActivity extends BaseActivity implements View.OnClickLi
                 new RecyclerItemClickListener(context, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-
+                        Intent intent = new Intent(context, ScreenScheduleListActivity.class);
+                        startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
                     }
                 }));
 

@@ -1,19 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container_Ll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <include layout="@layout/top_header_layout" />
 
-    <com.ecloud.pulltozoomview.PullToZoomScrollViewEx
-        android:id="@+id/scroll_view"
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp">
+
+        <ImageView
+            android:layout_width="@dimen/SCREEN_HEXA_PROFILE_size_big"
+            android:layout_height="@dimen/SCREEN_HEXA_PROFILE_size_big"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/screen_polygon_shadow"
+            android:visibility="gone" />
+
+
+        <com.displayfort.app.widgets.HexagonMaskView
+            android:id="@+id/hexaImage_iv"
+            android:layout_width="@dimen/SCREEN_HEXA_PROFILE_size"
+            android:layout_height="@dimen/SCREEN_HEXA_PROFILE_size"
+            android:layout_centerInParent="true"
+            android:layout_margin="4dp"
+            android:src="@mipmap/avatar_for_screens_whiteback"
+            android:visibility="visible" />
+
+        <ImageView
+            android:layout_width="@dimen/SCREEN_HEXA_PROFILE_size_big"
+            android:layout_height="@dimen/SCREEN_HEXA_PROFILE_size_big"
+            android:layout_centerInParent="true"
+            android:layout_margin="2dp"
+            android:background="@mipmap/screen_polygon_with_shadow" />
+
+    </RelativeLayout>
+
+
+    <RadioGroup
+        android:id="@+id/payment_option_rg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="3">
 
-    <include layout="@layout/custom_toolbar" />
+        <com.displayfort.app.TextUtils.TypefaceRadioButtonBrandenReg
+            android:id="@+id/general_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="-12dp"
+            android:layout_weight="1"
+            android:background="@drawable/hexa_radiobutton_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="GENERAL"
+            android:textColor="@drawable/manager_blue_text_selector"
+            android:textSize="14sp" />
 
 
-</RelativeLayout>
+        <com.displayfort.app.TextUtils.TypefaceRadioButtonBrandenReg
+            android:id="@+id/link_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rehexa_radiobutton_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="LINK"
+            android:textColor="@drawable/manager_blue_text_selector"
+            android:textSize="14sp" />
+
+        <com.displayfort.app.TextUtils.TypefaceRadioButtonBrandenReg
+            android:id="@+id/location_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-12dp"
+            android:layout_weight="1"
+            android:background="@drawable/hexa_radiobutton_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="LOCATION"
+            android:textColor="@drawable/manager_blue_text_selector"
+            android:textSize="14sp" />
+
+    </RadioGroup>
+
+
+    <include layout="@layout/content_general_view" />
+    <!---->
+    <include layout="@layout/content_link_view" />
+    <!---->
+    <include layout="@layout/content_location_view" />
+
+</LinearLayout>

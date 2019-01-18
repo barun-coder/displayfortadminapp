@@ -14,9 +14,19 @@
     <dimen name="HEXA_size_big">122dp</dimen>
     <dimen name="HEXA_size_half">20dp</dimen>
 
-    <dimen name="SCREEN_HEXA_size">150dp</dimen>
-    <dimen name="SCREEN_HEXA_size_big">158dp</dimen>
-    <dimen name="SCREEN_HEXA_size_half">60dp</dimen>
+    <dimen name="SCREEN_HEXA_size">120dp</dimen>
+    <dimen name="SCREEN_HEXA_size_big">128dp</dimen>
+    <dimen name="SCREEN_HEXA_size_half">50dp</dimen>
+    <!---->
+
+    <dimen name="PROFILE_HEXA_size">100dp</dimen>
+    <dimen name="PROFILE_HEXA_size_big">108dp</dimen>
+    <dimen name="PROFILE_HEXA_size_half">50dp</dimen>
+
+    <!---->
+    <dimen name="SCREEN_HEXA_PROFILE_size">160dp</dimen>
+    <dimen name="SCREEN_HEXA_PROFILE_size_big">168dp</dimen>
+    <dimen name="SCREEN_HEXA_PROFILE_size_half">70dp</dimen>
     <!---->
     <integer name="max_width_short_month_label_dp">240</integer>
     <integer name="max_height_mini_view_dp">180</integer>
@@ -24,4 +34,9 @@
 
     <dimen name="MEDIA_HEXA">55dp</dimen>
     <dimen name="MEDIA_HEXA_HALF">30dp</dimen>
+
+
+    <dimen name="SCHEDULE_HEXA_size">70dp</dimen>
+    <dimen name="SCHEDULE_HEXA_size_big">78dp</dimen>
+    <dimen name="SCHEDULE_HEXA_size_half">35dp</dimen>
 </resources>

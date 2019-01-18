@@ -8,23 +8,29 @@ import android.view.View;
 import com.displayfort.app.DFPrefrence;
 import com.displayfort.app.R;
 import com.displayfort.app.base.BaseActivity;
+import com.facebook.shimmer.ShimmerFrameLayout;
 
 
 public class ActivitySplash extends BaseActivity implements View.OnClickListener {
 
     private Context context;
+    private ShimmerFrameLayout container;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         context = this;
+        container =
+                (ShimmerFrameLayout) findViewById(R.id.shimmer_view_container);
+
+
         Thread background = new Thread() {
             public void run() {
 
                 try {
                     // Thread will sleep for 5 seconds
-                    sleep(2 * 1000);
+                    sleep(3 * 1000);
 
                     // After 5 seconds redirect to another intent
 //                    new DFPrefrence(context).setIsLogin(true);
@@ -34,7 +40,7 @@ public class ActivitySplash extends BaseActivity implements View.OnClickListener
                     } else {
                         startActivityWithAnim(new Intent(getBaseContext(), LoginActivity.class));
                     }
-
+                    container.stopShimmer();
                     //Remove activity
                     finish();
 
@@ -61,4 +67,15 @@ public class ActivitySplash extends BaseActivity implements View.OnClickListener
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        container.startShimmer();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        container.stopShimmer();
+    }
 }

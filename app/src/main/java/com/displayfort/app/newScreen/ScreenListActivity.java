@@ -11,9 +11,11 @@ import com.displayfort.app.R;
 import com.displayfort.app.adapter.PartnersListAdapter;
 import com.displayfort.app.adapter.ScreenListAdapter;
 import com.displayfort.app.base.BaseActivity;
+import com.displayfort.app.base.BaseAnimation;
 import com.displayfort.app.fragments.ScreenFragment;
 import com.displayfort.app.model.PartnersDao;
 import com.displayfort.app.model.ScreenDao;
+import com.displayfort.app.screen.ScreenDetailActivity;
 import com.displayfort.app.widgets.RecyclerItemClickListener;
 import com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout;
 
@@ -44,7 +46,8 @@ public class ScreenListActivity extends BaseActivity implements View.OnClickList
                 new RecyclerItemClickListener(context, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-
+                        Intent intent = new Intent(context, ScreenDetailActivity.class);
+                        startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
                     }
                 }));
 

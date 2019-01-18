@@ -35,4 +35,9 @@ public class Constant {
         friends.add(new Friend(R.mipmap.home_media, "MEDIA", R.color.colorPrimary, "Development", "Android", "Healthcare", "Sport", "Rock Music"));
         friends.add(new Friend(R.mipmap.home_expiry, "EXPIRY", R.color.colorPrimary, "Android", "IOS", "Application", "Development", "Company"));
     }
+
+
+    public static final int GENERAL = 1;
+    public static final int LINK = 2;
+    public static final int LOCATION= 3;
 }

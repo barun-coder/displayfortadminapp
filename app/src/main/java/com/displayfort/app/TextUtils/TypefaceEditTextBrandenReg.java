@@ -4,6 +4,7 @@ package com.displayfort.app.TextUtils;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.support.v7.widget.AppCompatEditText;
 import android.util.AttributeSet;
 import android.widget.EditText;
 
@@ -11,7 +12,7 @@ import android.widget.EditText;
 /**
  * @author husains
  */
-public class TypefaceEditTextBrandenReg extends EditText {
+public class TypefaceEditTextBrandenReg extends AppCompatEditText{
 
     public TypefaceEditTextBrandenReg(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
@@ -32,7 +33,7 @@ public class TypefaceEditTextBrandenReg extends EditText {
         try {
 
             if (!isInEditMode()) {
-                Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Roboto-Regular.ttf");
+                Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Montserrat-Regular.ttf");
                 setTypeface(tf);
             }
 

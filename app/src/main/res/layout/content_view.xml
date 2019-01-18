@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/general_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp">
+    <!---->
+
+
+    <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+        android:id="@+id/screen_name_tv"
+        style="@style/paragraphStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:text="UNnamed"
+        android:textSize="16sp" />
+
+
+    <com.displayfort.app.TextUtils.TypefaceTextViewBrandenLight
+        android:id="@+id/screen_name_title"
+        style="@style/paragraphStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:text="SCREEN NAME"
+        android:textColor="@color/head_text"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/screen_name_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#CFCFCF"
+        android:visibility="visible" />
+
+
+    <!---->
+</RelativeLayout>

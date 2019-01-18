@@ -2,13 +2,14 @@ package com.displayfort.app.TextUtils;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
 /**
  * Created by applanche on 19/4/16.
  */
-public class TypefaceTextViewBrandenBold extends TextView {
+public class TypefaceTextViewBrandenBold extends AppCompatTextView{
 
     public TypefaceTextViewBrandenBold(Context context, AttributeSet attrs, int defStyle) {
         super( context, attrs, defStyle );
@@ -29,7 +30,7 @@ public class TypefaceTextViewBrandenBold extends TextView {
         try {
 
             if (!isInEditMode()) {
-                Typeface tf = Typeface.createFromAsset( getContext().getAssets(), "fonts/Roboto-Bold.ttf" );
+                Typeface tf = Typeface.createFromAsset( getContext().getAssets(), "fonts/Montserrat-Bold.ttf" );
                 setTypeface( tf );
             }
 

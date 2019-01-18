@@ -1,23 +1,31 @@
 package com.displayfort.app.screen;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
+import com.displayfort.app.DFPrefrence;
 import com.displayfort.app.R;
+import com.displayfort.app.Utils.Dialogs;
 import com.displayfort.app.base.BaseActivity;
 import com.displayfort.app.base.BaseAnimation;
 import com.displayfort.app.base.BaseFragment;
 import com.displayfort.app.base.Constant;
 import com.displayfort.app.newScreen.AdsProfileListActivity;
 import com.displayfort.app.newScreen.MediaListActivity;
+import com.displayfort.app.newScreen.MyProfileDetailActivity;
 import com.displayfort.app.newScreen.PartnerListActivity;
 import com.displayfort.app.newScreen.ScheduleListActivity;
 import com.displayfort.app.newScreen.ScreenListActivity;
@@ -32,6 +40,9 @@ public class NewHomeScreenActivity extends BaseActivity implements View.OnClickL
 
     private Context context;
     private NewHomeScreenViewHolder screenViewHolder;
+    private GestureDetector gestureDetector;
+    private View.OnTouchListener gestureListener;
+    private SimpleGestureFilter detector;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,6 +53,7 @@ public class NewHomeScreenActivity extends BaseActivity implements View.OnClickL
 
     }
 
+    /**/
     public static Intent getIntent(Context context) {
         Intent intent = new Intent(context, NewHomeScreenActivity.class);
         return intent;
@@ -58,6 +70,17 @@ public class NewHomeScreenActivity extends BaseActivity implements View.OnClickL
             case R.id.right_iv:
                 break;
             case R.id.top_iv:
+                Dialogs.showYesNolDialog(context, "Confirmation", "Are you sure you want to Logout", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        ((Dialog) v.getTag()).dismiss();
+                        new DFPrefrence(context).setClearPrefrence();
+                        Intent intent = new Intent(context, LoginActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivityWithAnim(intent);
+                    }
+                });
+
                 break;
             case R.id.bottom_iv:
                 break;
@@ -85,7 +108,7 @@ public class NewHomeScreenActivity extends BaseActivity implements View.OnClickL
                 HideWithAnimation(Constant.MEDIA);
                 break;
             case R.id.expiry_ll:
-                HideWithAnimation(Constant.STATUS);
+                HideWithAnimation(Constant.SETTING);
                 break;
             default:
                 break;
@@ -141,23 +164,21 @@ public class NewHomeScreenActivity extends BaseActivity implements View.OnClickL
                 screenViewHolder.mMenuLayoutLl.setVisibility(View.GONE);
                 if (fragmentStr.equalsIgnoreCase(Constant.PARTNERS)) {
                     Intent intent = new Intent(context, PartnerListActivity.class);
-                    intent.putExtra(Constant.ACTIVTY_TYPE, fragmentStr);
                     startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
                 } else if (fragmentStr.equalsIgnoreCase(Constant.SCREEN)) {
                     Intent intent = new Intent(context, ScreenListActivity.class);
-                    intent.putExtra(Constant.ACTIVTY_TYPE, fragmentStr);
                     startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
                 } else if (fragmentStr.equalsIgnoreCase(Constant.ADS_PROFILE)) {
                     Intent intent = new Intent(context, AdsProfileListActivity.class);
-                    intent.putExtra(Constant.ACTIVTY_TYPE, fragmentStr);
                     startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
-                }else if (fragmentStr.equalsIgnoreCase(Constant.MEDIA)) {
+                } else if (fragmentStr.equalsIgnoreCase(Constant.MEDIA)) {
                     Intent intent = new Intent(context, MediaListActivity.class);
-                    intent.putExtra(Constant.ACTIVTY_TYPE, fragmentStr);
                     startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
-                }else if (fragmentStr.equalsIgnoreCase(Constant.SCHEDULE)) {
+                } else if (fragmentStr.equalsIgnoreCase(Constant.SCHEDULE)) {
                     Intent intent = new Intent(context, ScheduleListActivity.class);
-                    intent.putExtra(Constant.ACTIVTY_TYPE, fragmentStr);
+                    startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
+                }  else if (fragmentStr.equalsIgnoreCase(Constant.SETTING)) {
+                    Intent intent = new Intent(context, MyProfileDetailActivity.class);
                     startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
                 } else {
                     Intent intent = new Intent(context, SubActivityScreen.class);
@@ -240,4 +261,8 @@ public class NewHomeScreenActivity extends BaseActivity implements View.OnClickL
             super.onBackPressed();
         }
     }
+
+    /**/
+
+
 }

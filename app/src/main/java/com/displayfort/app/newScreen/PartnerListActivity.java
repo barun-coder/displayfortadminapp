@@ -6,14 +6,15 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.TextView;
 
 import com.displayfort.app.R;
 import com.displayfort.app.adapter.PartnersListAdapter;
 import com.displayfort.app.base.BaseActivity;
+import com.displayfort.app.base.BaseAnimation;
 import com.displayfort.app.model.PartnersDao;
+import com.displayfort.app.screen.PartnerDetailActivity;
+import com.displayfort.app.screen.ScreenScheduleActivity;
 import com.displayfort.app.widgets.RecyclerItemClickListener;
-import com.kunzisoft.switchdatetime.SwitchDateTimeDialogFragment;
 import com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout;
 
 import java.util.ArrayList;
@@ -29,7 +30,13 @@ public class PartnerListActivity extends BaseActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.partners_layout);
         context = this;
-        SetToolBar("Partners");
+        SetToolBarITI("Partners", R.mipmap.media_library_plus_icon, "Add", new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, AddPartnerActivity.class);
+                startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
+            }
+        });
         viewholder = new PartnersViewHolder(findViewById(R.id.container_Ll), this);
         setAdapter();
     }
@@ -43,7 +50,8 @@ public class PartnerListActivity extends BaseActivity implements View.OnClickLis
                 new RecyclerItemClickListener(context, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-
+                        Intent intent = new Intent(context, PartnerDetailActivity.class);
+                        startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
                     }
                 }));
 

@@ -32,7 +32,7 @@ public class TypefaceButtonBrandenReg extends Button {
         try {
 
             if (!isInEditMode()) {
-                Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Roboto-Regular.ttf");
+                Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Montserrat-Regular.ttf");
                 setTypeface(tf);
             }
 

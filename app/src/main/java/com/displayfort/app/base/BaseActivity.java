@@ -1,5 +1,6 @@
 package com.displayfort.app.base;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +10,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.displayfort.app.R;
@@ -68,8 +71,15 @@ public class BaseActivity extends AppCompatActivity implements OnClickListener {
         switch (v.getId()) {
             case R.id.txtToolbarTitle:
             case R.id.imgBack:
+                hideSoftKeyboard(this);
                 onBackPressed();
         }
+    }
+
+
+    public static void hideSoftKeyboard(Activity activity) {
+        InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
     }
 
     /**
@@ -152,18 +162,28 @@ public class BaseActivity extends AppCompatActivity implements OnClickListener {
         mtxtToolbarTitleTv.setText(title);
     }
 
-    public void SetToolBarITI(String title, int rightIv, OnClickListener rightListener) {
+    public void SetToolBarITI(String title, int rightIv, String righttxt, OnClickListener rightListener) {
         ImageView leftIconIv = findViewById(R.id.imgBack);
-        leftIconIv.setOnClickListener(this);
-        ImageView rightIconIv = findViewById(R.id.rightIv);
-        rightIconIv.setVisibility(View.VISIBLE);
-        if (rightIv != 0) {
-            rightIconIv.setImageResource(rightIv);
-        }
-        rightIconIv.setOnClickListener(rightListener);
-
         TextView mtxtToolbarTitleTv = (TextView) findViewById(R.id.txtToolbarTitle);
+        leftIconIv.setOnClickListener(this);
+        mtxtToolbarTitleTv.setOnClickListener(this);
         mtxtToolbarTitleTv.setText(title);
+
+        ImageView rightIconIv = findViewById(R.id.rightIv);
+        TextView rightTv = findViewById(R.id.right_tv);
+        RelativeLayout rightRl = findViewById(R.id.right_rl);
+        rightRl.setVisibility(View.VISIBLE);
+        rightTv.setText(righttxt);
+
+        if (rightIv != 0) {
+            rightIconIv.setVisibility(View.VISIBLE);
+            rightIconIv.setImageResource(rightIv);
+        } else {
+            rightIconIv.setVisibility(View.INVISIBLE);
+        }
+        rightRl.setOnClickListener(rightListener);
+
+
     }
 
     public void SetToolBarITT(String title, String rightIv, OnClickListener rightListener) {

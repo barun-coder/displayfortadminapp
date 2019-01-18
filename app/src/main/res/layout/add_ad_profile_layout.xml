@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container_ll"
     android:layout_width="match_parent"
@@ -7,79 +7,171 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <include layout="@layout/custom_toolbar" />
-
-    <ScrollView
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/top_header_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:id="@+id/profile_dt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_layout"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:padding="0dp"
+            android:theme="@style/floatLabel"
+            app:hintTextAppearance="@style/MyHintText">
+
+            <EditText
+                android:id="@+id/profile_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Profile Title"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="4dp">
+            android:layout_below="@+id/pt"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
 
-            <LinearLayout
+            <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Status"
+                android:textColor="@color/dark_text_color"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chkState"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="4dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:src="@mipmap/screen_name" />
-
-                <android.support.design.widget.TextInputLayout
-                    style="@style/floatLabel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
-                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
-
-                    <EditText
-                        android:id="@+id/profile_et"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Ad Profile Title"
-                        android:inputType="text"
-                        android:maxLines="1"
-                        android:singleLine="true" />
-
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
-
-            <!---->
-            <LinearLayout
-                android:id="@+id/media_ll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <include layout="@layout/item_add_media_layout" />
-            </LinearLayout>
-            <!---->
-            <Button
-                android:id="@+id/add_media_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/big_button_selector"
-                android:gravity="center"
-                android:paddingBottom="12dp"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp"
-                android:paddingTop="12dp"
-                android:text="Add Media"
-                android:textColor="@drawable/text_selector"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="20dp"
+                android:button="@drawable/toggle_selector"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="18dp"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff=""
+                android:textOn=""
+                android:textSize="12sp" />
         </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+    </RelativeLayout>
+
+    <!---->
+    <RelativeLayout
+        android:id="@+id/head_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_dt"
+        android:layout_gravity="top"
+        android:background="@color/white"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <RelativeLayout
+            android:id="@+id/botttom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="4dp">
+
+
+            <com.displayfort.app.TextUtils.TypefaceTextViewBrandenBold
+                android:id="@+id/adp_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:text="Media Content"
+                android:textColor="@color/head_text"
+                android:textSize="18sp" />
+
+            <com.displayfort.app.TextUtils.TypefaceTextViewBrandenBold
+                android:id="@+id/adp_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/add_media_iv"
+                android:text="5"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/add_media_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@mipmap/ads_profile_plus_color_button" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/add_media_iv"
+                android:layout_toLeftOf="@+id/add_media_iv"
+                android:src="@mipmap/shedule_line" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <!---->
+    <android.support.v7.widget.RecyclerView xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/recyclerView_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/add_media_btn"
+        android:layout_below="@+id/head_ads"
+        android:scrollIndicators="none"
+        android:scrollbarStyle="@null"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/item_add_media_layout" />
+
+
+    <!---->
+    <Button
+        android:id="@+id/add_media_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/big_button_selector"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingTop="12dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="12dp"
+        android:text="Add Media"
+        android:textColor="@drawable/text_selector"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

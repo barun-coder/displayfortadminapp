@@ -4,6 +4,7 @@ package com.displayfort.app.TextUtils;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
@@ -11,7 +12,7 @@ import android.widget.TextView;
 /**
  * @author husains
  */
-public class TypefaceTextViewBrandenLight extends TextView {
+public class TypefaceTextViewBrandenLight extends AppCompatTextView {
 
     public TypefaceTextViewBrandenLight(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
@@ -32,7 +33,7 @@ public class TypefaceTextViewBrandenLight extends TextView {
         try {
 
             if (!isInEditMode()) {
-                Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Roboto-Light.ttf");
+                Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Montserrat-Light.ttf");
                 setTypeface(tf);
             }
 

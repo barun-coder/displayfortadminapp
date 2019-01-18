@@ -6,7 +6,7 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <include layout="@layout/custom_toolbar" />
+    <include layout="@layout/top_header_layout" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,51 +14,95 @@
         android:orientation="vertical"
         android:paddingLeft="15dp"
         android:paddingRight="15dp">
-
+        <!---->
         <com.displayfort.app.TextUtils.TypefaceTextViewBrandenBold
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Start Date "
+            android:text="Select_profile"
             android:textColor="@color/dark_text_color"
             android:textSize="16sp" />
 
         <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
-            android:id="@+id/start_date_tv"
+            android:id="@+id/select_profile"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@drawable/box_textview"
-            android:drawableRight="@mipmap/calendar"
+            android:background="@drawable/edit_new_box"
+            android:backgroundTint="@color/black"
+            android:minHeight="45dp"
             android:padding="15dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textColor="@color/dark_text_color" />
 
-        <com.displayfort.app.TextUtils.TypefaceTextViewBrandenBold
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="TO "
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp" />
+            android:orientation="vertical">
+            <!---->
+            <com.displayfort.app.TextUtils.TypefaceTextViewBrandenBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Start Date "
+                android:textColor="@color/dark_text_color"
+                android:textSize="16sp" />
 
+            <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                android:id="@+id/start_date_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_new_box"
+                android:backgroundTint="@color/black"
+                android:drawableRight="@mipmap/schedule_date_time_red_icon"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:textColor="@color/dark_text_color" />
+
+
+            <!---->
+            <com.displayfort.app.TextUtils.TypefaceTextViewBrandenBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="End Date "
+                android:textColor="@color/dark_text_color"
+                android:textSize="16sp" />
+
+            <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
+                android:id="@+id/end_date_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_new_box"
+                android:backgroundTint="@color/black"
+                android:drawableRight="@mipmap/schedule_date_time_red_icon"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:textColor="@color/dark_text_color" />
+
+        </LinearLayout>
+        <!---->
         <com.displayfort.app.TextUtils.TypefaceTextViewBrandenBold
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="End Date "
+            android:text="Select Screen"
             android:textColor="@color/dark_text_color"
             android:textSize="16sp" />
 
-        <com.displayfort.app.TextUtils.TypefaceTextViewBrandenReg
-            android:id="@+id/end_date_tv"
+        <com.displayfort.app.TextUtils.TypefaceHashTagAutocompleteBrandenReg
+            android:id="@+id/input_form"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@drawable/box_textview"
-            android:drawableRight="@mipmap/calendar"
+            android:background="@drawable/edit_new_box"
+            android:backgroundTint="@color/black"
+            android:completionThreshold="1"
+            android:hint="#Screen1  #Screen2"
+            android:minHeight="45dp"
             android:padding="15dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"

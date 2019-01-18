@@ -10,7 +10,10 @@ import android.view.View;
 import com.displayfort.app.R;
 import com.displayfort.app.adapter.AdsProfileListAdapter;
 import com.displayfort.app.base.BaseActivity;
+import com.displayfort.app.base.BaseAnimation;
 import com.displayfort.app.model.AdsProfile;
+import com.displayfort.app.screen.AddAdProfileActivity;
+import com.displayfort.app.screen.ScreenScheduleActivity;
 import com.displayfort.app.widgets.RecyclerItemClickListener;
 import com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout;
 
@@ -27,7 +30,13 @@ public class AdsProfileListActivity extends BaseActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ads_profile_list_layout);
         context = this;
-        SetToolBar("Ads Profile");
+        SetToolBarITI("Ads Profile", R.mipmap.media_library_plus_icon, "Add Profiles", new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, AddAdProfileActivity.class);
+                startActivityWithAnim(intent, BaseAnimation.EFFECT_TYPE.TAB_SLIDE_RIGHT);
+            }
+        });
         viewholder = new HomeViewHolder(findViewById(R.id.container_Ll), this);
         setAdapter();
     }

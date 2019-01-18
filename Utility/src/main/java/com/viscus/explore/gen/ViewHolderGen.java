@@ -11,7 +11,7 @@ import java.util.List;
 public class ViewHolderGen {
     private static final String LAYOUT_PATH = "G:\\DisplayFort\\androidCode\\DisplayFortMobileAPP\\DisplayFortSoftware\\app\\src\\main\\res\\layout";
 
-    private static final String XML_FILE_NAME = "new_home_screen_layout.xml";
+    private static final String XML_FILE_NAME = "partners_detail_layout.xml";
 
     private static String WIDGETS = "";
 

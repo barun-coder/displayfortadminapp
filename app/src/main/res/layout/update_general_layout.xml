@@ -8,7 +8,7 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <include layout="@layout/custom_toolbar" />
+    <include layout="@layout/top_header_layout" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -31,15 +31,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:src="@mipmap/screen_name" />
+                    android:src="@mipmap/screen_name"
+                    android:tint="#C52038" />
 
                 <android.support.design.widget.TextInputLayout
-                    style="@style/floatLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+                    android:theme="@style/floatLabel"
+                    app:hintTextAppearance="@style/MyHintText">
 
                     <EditText
                         android:id="@+id/fullname_et"
@@ -56,6 +57,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -63,15 +65,16 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_gravity="center_vertical"
-                    android:src="@mipmap/vpn_ip" />
+                    android:src="@mipmap/vpn_ip"
+                    android:tint="#C52038" />
 
                 <android.support.design.widget.TextInputLayout
-                    style="@style/floatLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+                    android:theme="@style/floatLabel"
+                    app:hintTextAppearance="@style/MyHintText">
 
                     <EditText
                         android:id="@+id/vpn_et"
@@ -98,15 +101,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:src="@mipmap/unique_identity_number" />
+                    android:src="@mipmap/unique_identity_number"
+                    android:tint="#C52038" />
 
                 <android.support.design.widget.TextInputLayout
-                    style="@style/floatLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+                    android:theme="@style/floatLabel"
+                    app:hintTextAppearance="@style/MyHintText">
 
                     <EditText
                         android:id="@+id/username_et"
@@ -131,15 +135,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:src="@mipmap/data_card_number" />
+                    android:src="@mipmap/data_card_number"
+                    android:tint="#C52038" />
 
                 <android.support.design.widget.TextInputLayout
-                    style="@style/floatLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+                    android:theme="@style/floatLabel"
+                    app:hintTextAppearance="@style/MyHintText">
 
                     <EditText
                         android:id="@+id/password_et"
@@ -156,6 +161,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -163,15 +169,16 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_gravity="center_vertical"
-                    android:src="@mipmap/tags" />
+                    android:src="@mipmap/tags"
+                    android:tint="#C52038" />
 
                 <android.support.design.widget.TextInputLayout
-                    style="@style/floatLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+                    android:theme="@style/floatLabel"
+                    app:hintTextAppearance="@style/MyHintText">
 
                     <EditText
                         android:id="@+id/tags_et"
@@ -196,15 +203,16 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_gravity="center_vertical"
-                    android:src="@mipmap/internet_expiry_date" />
+                    android:src="@mipmap/internet_expiry_date"
+                    android:tint="#C52038" />
 
                 <android.support.design.widget.TextInputLayout
-                    style="@style/floatLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+                    android:theme="@style/floatLabel"
+                    app:hintTextAppearance="@style/MyHintText">
 
                     <EditText
                         android:id="@+id/expiry_et"
@@ -225,12 +233,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/button_selector"
+                android:background="@mipmap/edit_general_links_map_edit_button"
                 android:gravity="center"
-                android:paddingBottom="12dp"
                 android:paddingLeft="30dp"
-                android:paddingRight="30dp"
                 android:paddingTop="12dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="12dp"
                 android:text="Update"
                 android:textColor="@drawable/text_selector"
                 android:textSize="18sp"
